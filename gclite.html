@@ -309,10 +309,10 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url3 = 'https://globalclickeapi.glitch.me/v5'
-			$.getJSON(url3, function(data4) {
-				count3.innerHTML = (data4.value)
-				gap4 = parseFloat (data4.value)
+			var url4 = 'https://globalclickeapi.glitch.me/v5'
+			$.getJSON(url4, function(data4) {
+				count4.innerHTML = (data4.value)
+				
 				
 				
 			});
@@ -321,13 +321,10 @@ $(document).ready(function() {
 		
 		setInterval(function() {
 		
-						var url3 = 'https://globalclickeapi.glitch.me/v5'
-			$.getJSON(url3, function(data4){
-				count3.innerHTML = (data4.value)
-				gap4 = parseFloat (data4.value)
-				gappp.innerHTML = gap1-gap4;
-				gappppp.innerHTML = gap2-gap4;
-				gapppppp.innerHTML =gap3-gap4;
+						var url4 = 'https://globalclickeapi.glitch.me/v5'
+			$.getJSON(url4, function(data4){
+				count4.innerHTML = (data4.value)
+
                 
 			});
 			
