@@ -310,7 +310,7 @@ $(document).ready(function() {
         function loadChannel(name) {
 			channelName = name;
 			var url3 = 'https://globalclickeapi.glitch.me/v5'
-			$.getJSON(url3, function(data4.value) {
+			$.getJSON(url3, function(data4) {
 				count3.innerHTML = (data4.value)
 				gap4 = parseFloat (data4.value)
 				
@@ -322,7 +322,7 @@ $(document).ready(function() {
 		setInterval(function() {
 		
 						var url3 = 'https://globalclickeapi.glitch.me/v5'
-			$.getJSON(url3, function(data3){
+			$.getJSON(url3, function(data4){
 				count3.innerHTML = (data4.value)
 				gap4 = parseFloat (data4.value)
 				gappp.innerHTML = gap1-gap4;
