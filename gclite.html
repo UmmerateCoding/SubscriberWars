@@ -208,7 +208,7 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url1 = 'https://globalclickerv2.t1ch.com/api/getdata'
+			var url1 = 'https://cors.nextcounts.live/raw?url=https://globalclickerv2.t1ch.com/api/getdata'
 			$.getJSON(url1, function(data1) {
 				count1.innerHTML = data1
 				gap2 = parseFloat(data1)
@@ -220,7 +220,7 @@ $(document).ready(function() {
 		
 		setInterval(function() {
 		
-						var url1 = 'https://globalclickerv2.t1ch.com/api/getdata'
+						var url1 = 'https://cors.nextcounts.live/raw?url=https://globalclickerv2.t1ch.com/api/getdata'
 			$.getJSON(url1, function(data1) {
 				count1.innerHTML = (data1)
 				gap2 = parseFloat(data1)
