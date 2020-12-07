@@ -262,7 +262,7 @@ $(document).ready(function() {
 			channelName = name;
 			var url3 = 'https://cors.nextcounts.live/raw?url=http://161.97.140.254:81/api/verysecretendpoint/getAll'
 			$.getJSON(url3, function(data3) {
-				count3.innerHTML = data3.abbCount
+				count3.innerHTML = (data3.abbCount)
 				gap4 = parseFloat (data3.abbCount)
 				
 				
