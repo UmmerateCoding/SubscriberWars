@@ -287,5 +287,40 @@ $(document).ready(function() {
         
 		
     });
+$(document).ready(function() {
+        var channelName = "";
+		
+		loadChannel("aa")
+		
+        function loadChannel(name) {
+			channelName = name;
+			var url3 = 'https://globalclickeapi.glitch.me/v5'
+			$.getJSON(url3, function(data4.value) {
+				count3.innerHTML = (data4.value)
+				gap4 = parseFloat (data4.value)
+				
+				
+			});
+			
+		}
+		
+		setInterval(function() {
+		
+						var url3 = 'https://globalclickeapi.glitch.me/v5'
+			$.getJSON(url3, function(data3){
+				count3.innerHTML = (data4.value)
+				gap4 = parseFloat (data4.value)
+				gappp.innerHTML = gap1-gap4;
+				gappppp.innerHTML = gap2-gap4;
+				gapppppp.innerHTML =gap3-gap4;
+                
+			});
+			
+			
+		}, 2000);
+        
+		
+    });
+
 
 </script>
