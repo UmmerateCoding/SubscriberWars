@@ -87,7 +87,7 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://bastet.socialblade.com/twitter/lookup?query=JayMBurton'
+			var url = 'http://cors.nextcounts.live/raw?url=https://bastet.socialblade.com/twitter/lookup?query=JayMBurton'
 			$.getJSON(url, function(data) {
 				twitter.innerHTML = data
 			});
@@ -96,7 +96,7 @@ $(document).ready(function() {
 		
 		setInterval(function() {
 		
-						var url = 'https://bastet.socialblade.com/twitter/lookup?query=JayMBurton'
+						var url = 'http://cors.nextcounts.live/raw?url=https://bastet.socialblade.com/twitter/lookup?query=JayMBurton'
 			$.getJSON(url, function(data) {
 				twitter.innerHTML = (data)
                 
