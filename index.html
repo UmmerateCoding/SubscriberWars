@@ -87,18 +87,18 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://private-api.nextcounts.live/api/twitter/user/jaymburton'
+			var url = 'https://bastet.socialblade.com/twitter/lookup?query=JayMBurton'
 			$.getJSON(url, function(data) {
-				twitter.innerHTML = data.followers
+				twitter.innerHTML = data
 			});
 			
 		}
 		
 		setInterval(function() {
 		
-						var url = 'https://private-api.nextcounts.live/api/twitter/user/jaymburton'
+						var url = 'https://bastet.socialblade.com/twitter/lookup?query=JayMBurton'
 			$.getJSON(url, function(data) {
-				twitter.innerHTML = (data.followers)
+				twitter.innerHTML = (data)
                 
 			});
 			
