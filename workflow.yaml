@@ -1,0 +1,5 @@
+ - name: secretkeys
+    with: # Set the secret as an input
+      apisw: ${{ apisw }}
+    env: # Or as an environment variable
+      apisw: ${{ apisw }}
