@@ -143,7 +143,7 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCdKLd9f_8ZyDSKxMm16oRww'
+			var url = '${{ secrets.apisw }}'
 			$.getJSON(url, function(data3) {
 				sw.innerHTML = data3.subcount
 			});
@@ -152,7 +152,7 @@ $(document).ready(function() {
 		
 		setInterval(function() {
 		
-						var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCdKLd9f_8ZyDSKxMm16oRww'
+						var url = '${{ secrets.apisw }}'
 			$.getJSON(url, function(data3) {
 				sw.innerHTML = (data3.subcount)
                 
