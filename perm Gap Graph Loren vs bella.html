@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+ 
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script src="https://kit.fontawesome.com/229e496f46.js" crossorigin="anonymous"></script>
+
+ 
+ <div id="chart"></div>
+ 
+<p id="One"></p>
+<p id="Two"></p>
+
+<script type="text/javascript">
+  var line = "#ffffff"
+ 
+var chart = new Highcharts.chart({
+chart: {
+renderTo: 'chart',
+type: 'spline',
+zoomType: 'x',
+backgroundColor: 'black',
+plotBorderColor: 'white'
+},
+title: {
+text: ''
+},
+xAxis: {
+type: 'datetime',
+tickPixelInterval: 100,
+gridLineColor: '#bdbdbd',
+labels: {
+style: {
+    color: 'white'
+}
+},
+lineColor: line,
+minorGridLineColor: '#bdbdbd',
+tickColor: '#bdbdbd',
+title: {
+style: {
+    color: '#bdbdbd'
+}
+}
+},
+yAxis: {
+title: {
+text: ''
+},
+gridLineColor: 'transparent',
+labels: {
+style: {
+    color: 'white'
+}
+},
+lineColor: '#ffffff',
+minorGridLineColor: '#f0f0f0',
+tickColor: '#bdbdbd'
+},
+credits: {
+enabled: true,
+text: "Livecounts.io"
+},
+ 
+series: [{
+showInLegend: false,
+name: 'Gap',
+marker: { enabled: false },
+color: 'transparent',
+lineColor: '#7edeff'
+}]
+});
+ 
+ 
+    </script>	
+ 
+ 
+<script type="text/javascript">
+ 
+ 
+ 
+ 
+    $(document).ready(function() {
+        var url = 'https://livecounts.io/api/tiktok-realtime/stats/lorengray'
+        $.getJSON(url, function(data) {
+            One.innerHTML = data.followerCount
+        });
+        var url = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+        $.getJSON(url, function(data) {
+            Two.innerHTML = data.followerCount
+        });
+        setInterval(function() {
+            var url = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+        $.getJSON(url, function(data) {
+            Two.innerHTML = data.followerCount
+        });
+        var url1 = 'https://livecounts.io/api/tiktok-realtime/stats/lorengray'
+        $.getJSON(url1, function(data) {
+          One.innerHTML = data.followerCount
+        });
+		
+ 
+        var yeslol = (One.innerHTML - Two.innerHTML)
+        console.log(yeslol)
+            var chartthingidk = yeslol
+			
+ 
+if (chart.series[0].points.length == 543434543) chart.series[0].data[0].remove();
+chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
+        }, 2000);
+ 
+    });
+ 
+</script>
