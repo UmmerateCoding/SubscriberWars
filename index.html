@@ -24,7 +24,7 @@
 	    <br>
 		<br>
 		
-		<h1><a href="https://www.youtube.com/channel/UCuEOWgNrCFBx9HrVwc09Eng">Subscriber Wars Live</a></h1>
+		<h1><a href="https://www.youtube.com/channel/UCuEOWgNrCFBx9HrVwc09Eng">SW2</a></h1>
 	</center>
 	
     <center>
@@ -35,7 +35,7 @@
 	    <br>
 		<br>
 		
-		<h1><a href="https://www.youtube.com/channel/UCMCcezu9B4776VzmPhaTThw">Subscriber Wars Gaming</a></h1>
+		<h1><a href="https://www.youtube.com/channel/UCMCcezu9B4776VzmPhaTThw">SW Gaming</a></h1>
 	</center>
 	
     <center>
@@ -46,7 +46,7 @@
 	    <br>
 		<br>
 		
-		<h1><a href="https://www.youtube.com/channel/UCVHpvJNz3kRdxBwqSsRuK2A">Subscriber Wars Exploring</a></h1>
+		<h1><a href="https://www.youtube.com/channel/UCVHpvJNz3kRdxBwqSsRuK2A">SW Exploring</a></h1>
 	</center>
 	
     <center>
@@ -87,18 +87,18 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://private-api.nextcounts.live/api/twitter/user/jaymburton'
+			var url = 'https://livecounts.io/api/twitter-realtime/stats/jaymburton'
 			$.getJSON(url, function(data) {
-				twitter.innerHTML = data.followers
+				twitter.innerHTML = data.followerCount
 			});
 			
 		}
 		
 		setInterval(function() {
 		
-						var url = 'https://private-api.nextcounts.live/api/twitter/user/jaymburton'
+						var url = 'https://livecounts.io/api/twitter-realtime/stats/jaymburton'
 			$.getJSON(url, function(data) {
-				twitter.innerHTML = (data.followers)
+				twitter.innerHTML = (data.followerCount)
                 
 			});
 			
@@ -116,18 +116,18 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://private-api.nextcounts.live/api/twitch/user/subscriberwars'
+			var url = 'https://api.twitch.tv/kraken/channels/445479678'
 			$.getJSON(url, function(data2) {
-				twitch.innerHTML = data2.followers
+				twitch.innerHTML = data2.followerCount
 			});
 			
 		}
 		
 		setInterval(function() {
 		
-						var url = 'https://private-api.nextcounts.live/api/twitch/user/subscriberwars'
+						var url = 'https://api.twitch.tv/kraken/channels/445479678'
 			$.getJSON(url, function(data2) {
-				twitch.innerHTML = (data2.followers)
+				twitch.innerHTML = (data2.followerCount)
                 
 			});
 			
@@ -170,18 +170,18 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCuEOWgNrCFBx9HrVwc09Eng'
+			var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCuEOWgNrCFBx9HrVwc09Eng'
 			$.getJSON(url, function(data4) {
-				swl.innerHTML = data4.subcount
+				swl.innerHTML = data4.followerCount
 			});
 			
 		}
 		
 		setInterval(function() {
 		
-						var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCuEOWgNrCFBx9HrVwc09Eng'
+						var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCuEOWgNrCFBx9HrVwc09Eng'
 			$.getJSON(url, function(data4) {
-				swl.innerHTML = (data4.subcount)
+				swl.innerHTML = (data4.followerCount)
                 
 			});
 			
@@ -197,18 +197,18 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCMCcezu9B4776VzmPhaTThw'
+			var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCMCcezu9B4776VzmPhaTThw'
 			$.getJSON(url, function(data5) {
-				swg.innerHTML = data5.subcount
+				swg.innerHTML = data5.followerCount
 			});
 			
 		}
 		
 		setInterval(function() {
 		
-						var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCMCcezu9B4776VzmPhaTThw'
+						var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCMCcezu9B4776VzmPhaTThw'
 			$.getJSON(url, function(data5) {
-				swg.innerHTML = (data5.subcount)
+				swg.innerHTML = (data5.followerCount)
                 
 			});
 			
@@ -224,18 +224,18 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCVHpvJNz3kRdxBwqSsRuK2A'
+			var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCVHpvJNz3kRdxBwqSsRuK2A'
 			$.getJSON(url, function(data6) {
-				swe.innerHTML = data6.subcount
+				swe.innerHTML = data6.followerCount
 			});
 			
 		}
 		
 		setInterval(function() {
 		
-						var url = 'https://private-api.nextcounts.live/api/youtube/channel/UCVHpvJNz3kRdxBwqSsRuK2A'
+						var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCVHpvJNz3kRdxBwqSsRuK2A'
 			$.getJSON(url, function(data6) {
-				swe.innerHTML = (data6.subcount)
+				swe.innerHTML = (data6.followerCount)
                 
 			});
 			
