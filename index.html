@@ -143,18 +143,18 @@ $(document).ready(function() {
 		
         function loadChannel(name) {
 			channelName = name;
-			var url = 'secrets.APISW'
+			var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCdKLd9f_8ZyDSKxMm16oRww'
 			$.getJSON(url, function(data3) {
-				sw.innerHTML = data3.subcount
+				sw.innerHTML = data3.followerCount
 			});
 			
 		}
 		
 		setInterval(function() {
 		
-						var url = 'secrets.APISW'
+						var url = 'https://livecounts.io/api/youtube-live-subscriber-count/stats/UCdKLd9f_8ZyDSKxMm16oRww'
 			$.getJSON(url, function(data3) {
-				sw.innerHTML = (data3.subcount)
+				sw.innerHTML = (data3.followerCount)
                 
 			});
 			
