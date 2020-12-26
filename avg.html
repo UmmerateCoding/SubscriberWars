@@ -89,8 +89,8 @@
 <script type="text/javascript">
   var avg = [];
   var avg1 = [];
-  var url = 'https://private-api.nextcounts.live/api/tiktok/user/lorengray';  
-  var url1 = 'https://private-api.nextcounts.live/api/tiktok/user/bellapoarch'; 
+  var url = 'https://livecounts.space/api2_priv/tiktok_api/lorengray';  
+  var url1 = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'; 
  
  
  
@@ -100,7 +100,7 @@
    $(document).ready(function () {
  
     $.getJSON(url, function (data) {
-      avg.push(Math.floor(data.followers));
+      avg.push(Math.floor(data.followerCount));
       if (avg.length >= 10) { avg.shift() }
       var count = 0;
       for (var i = 0; i < avg.length; i++) {
@@ -124,7 +124,7 @@
  
  
  
-        avg.push(Math.floor(data.followers))
+        avg.push(Math.floor(data.followerCount))
         if (avg.length >= 10) { avg.shift() }
         var count = 0;
         for (var i = 0; i < avg.length; i++) {
@@ -168,7 +168,7 @@
    var avg1 = [];
     setInterval(function (data1) {
         $.getJSON(url1, function (data1) {
-      avg1.push(Math.floor(data1.followers));
+      avg1.push(Math.floor(data1.followerCount));
       if (avg1.length >= 10) { avg1.shift() }
       var count1 = 0;
       for (var i1 = 0; i1 < avg1.length; i1++) {
