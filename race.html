@@ -31,19 +31,19 @@ var gap02 = 0;
 $(document).ready(function() {
 
         channelName = name;
-        var url = 'https://private-api.nextcounts.live/api/tiktok/user/lorengray'
+        var url = 'https://livecounts.space/api2_priv/tiktok_api/lorengray'
         $.getJSON(url, function(data) {
-            count.innerHTML = (data.followers)
+            count.innerHTML = (data.followerCount)
             gap01 = parseFloat(data)
         });
         
     
     setInterval(function() {
     
-                    var url = 'https://private-api.nextcounts.live/api/tiktok/user/lorengray'
+                    var url = 'https://livecounts.space/api2_priv/tiktok_api/lorengray'
         $.getJSON(url, function(data) {
-            count.innerHTML = (data.followers)
-            gap01 = parseFloat(data.followers)
+            count.innerHTML = (data.followerCount)
+            gap01 = parseFloat(data.followerCount)
         });
         
     }, 2000);
@@ -53,9 +53,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
-        var url1 = 'https://private-api.nextcounts.live/api/tiktok/user/bellapoarch'
+        var url1 = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url1, function(data1) {
-            count1.innerHTML = (data1.followers)
+            count1.innerHTML = (data1.followerCount)
             gap02 = parseFloat(data1)
             
         });
@@ -63,10 +63,10 @@ $(document).ready(function() {
     
     setInterval(function() {
     
-                    var url1 = 'https://private-api.nextcounts.live/api/tiktok/user/bellapoarch'
+                    var url1 = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url1, function(data1) {
-            count1.innerHTML = (data1.followers)
-            gap02 = parseFloat(data1.followers)
+            count1.innerHTML = (data1.followerCount)
+            gap02 = parseFloat(data1.followerCount)
             gap.innerHTML = gap01-gap02;
 			gap2.innerHTML = 50000000-gap02;
         });
