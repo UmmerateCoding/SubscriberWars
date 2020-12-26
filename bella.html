@@ -63,7 +63,7 @@ tickColor: '#bdbdbd'
 },
 credits: {
 enabled: true,
-text: "Nextcounts.live"
+text: "Livecounts.space"
 },
  
 series: [{
@@ -85,9 +85,9 @@ lineColor: '#ff0066'
  
  
     $(document).ready(function() {
-        var url = 'https://private-api.nextcounts.live/api/tiktok/user/bellapoarch'
+        var url = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url, function(data) {
-            uhhh.innerHTML = followers
+            uhhh.innerHTML = followerCount
         });
         var url = ''
         $.getJSON(url, function(data) {
@@ -98,9 +98,9 @@ lineColor: '#ff0066'
         $.getJSON(url, function(data) {
             uhhm.innerHTML = data.SubscriberCount
         });
-        var url1 = 'https://private-api.nextcounts.live/api/tiktok/user/bellapoarch'
+        var url1 = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url1, function(data) {
-          uhhh.innerHTML = data.followers
+          uhhh.innerHTML = data.followerCount
         });
  
         var yeslol = (uhhh.innerHTML)
