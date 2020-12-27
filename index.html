@@ -130,14 +130,14 @@
     //Twitter
        $(document).ready(function() {
            function loadchannel(name){
-               var url=`http://livecounts.space/api/twitter/user/JayMBurton`
+               var url=`https://livecounts.space/api/twitter/user/JayMBurton`
                $.getJSON(url,function(data4){
                    twitter.innerHTML=data4.followers
                })
            }
 
            setInterval(function(){
-               var url=`http://livecounts.space/api/twitter/user/JayMBurton`
+               var url=`https://livecounts.space/api/twitter/user/JayMBurton`
                $.getJSON(url,function(data4){
                    twitter.innerHTML=data4.followers
                })
