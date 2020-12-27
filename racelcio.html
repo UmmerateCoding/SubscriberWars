@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<body>
+    <link rel="stylesheet" href="odometer-theme-minimal.css">
+    <script src="odometer.js"></script>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+<style>
+    *{font-family: Lato !Important; background-color: black; color: white;}
+    
+</style>
+
+<center><br><br><br><h1>Loren Gray</h1><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+<center><br><br><br><h1>Bella Poarch</h1><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+<center><br><br><br><h1>Bella 50M</h1><div class="odometer odometer-auto-theme" id="gap2" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+<center><br><br><br><h1>Loren Vs Bella</h1><div class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+
+
+
+
+
+
+
+</body>
+
+
+<script type="text/javascript">
+
+var gap01 = 0;
+var gap02 = 0;
+
+
+$(document).ready(function() {
+
+        channelName = name;
+        var url = 'https://livecounts.io/api/tiktok-realtime/stats/lorengray'
+        $.getJSON(url, function(data) {
+            count.innerHTML = (data.followerCount)
+            gap01 = parseFloat(data)
+        });
+        
+    
+    setInterval(function() {
+    
+                    var url = 'https://livecounts.io/api/tiktok-realtime/stats/lorengray'
+        $.getJSON(url, function(data) {
+            count.innerHTML = (data.followerCount)
+            gap01 = parseFloat(data.followerCount)
+        });
+        
+    }, 2000);
+    
+    
+});
+
+$(document).ready(function() {
+
+        var url1 = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+        $.getJSON(url1, function(data1) {
+            count1.innerHTML = (data1.followerCount)
+            gap02 = parseFloat(data1)
+            
+        });
+        
+    
+    setInterval(function() {
+    
+                    var url1 = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+        $.getJSON(url1, function(data1) {
+            count1.innerHTML = (data1.followerCount)
+            gap02 = parseFloat(data1.followerCount)
+            gap.innerHTML = gap01-gap02;
+			gap2.innerHTML = 100000000-gap02;
+        });
+        
+        
+    }, 2000);
+    
+    
+});
+
+
+
+
+</script>
+</html>
