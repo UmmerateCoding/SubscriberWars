@@ -3,7 +3,7 @@
 <style>*{font-family:lato; background-color:black; color:white}</style>
 
 <head>
-    <title>YouTube sub test</title>
+    <title>Subscriber Wars Is The Best</title>
     <script src="jquery-3.1.1.min.js"></script>
     <script src="odometer.js"></script>
     <link rel="stylesheet" href="odometer-theme-minimal.css">
@@ -11,20 +11,36 @@
 <body>
     <center>
         <img style="border:0px" src="https://yt3.ggpht.com/pVvSYiRAXPcUgTFZ4W1g7csOBb4hqBSxDwFF7fDVAPGkXd9ClHExh_2XtLabyecgahss6o2s=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj">
-        <h1>Subscriber Wars Socials (YT Counts update every 30s)</h1>
+        <h1 style="font-size: 10vh; font-weight: 800">Subscriber Wars</h1>
+        Update Every 30 Seconds<br>
         <h1>YouTube</h1>
         
         <h1><a href="https://www.youtube.com/channel/UCdKLd9f_8ZyDSKxMm16oRww">Subscriber Wars</a></h1>
-        <div class="odometer odometer-auto-theme" id="subcount" style="color: white; font-size: 10vh; background-color: transparent">0</div>
+        <div class="odometer odometer-auto-theme" id="subcount" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
         <br>
         <h1><a href="https://www.youtube.com/channel/UCuEOWgNrCFBx9HrVwc09Eng">Subscriber Wars 2</a></h1>
-        <div class="odometer odometer-auto-theme" id="subcount1" style="color: white; font-size: 10vh; background-color: transparent">0</div>
+        <div class="odometer odometer-auto-theme" id="subcount1" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
         <br>
         <h1><a href="https://www.youtube.com/channel/UCMCcezu9B4776VzmPhaTThw">Subscriber Wars Gaming</a></h1>
-        <div class="odometer odometer-auto-theme" id="subcount2" style="color: white; font-size: 10vh; background-color: transparent">0</div>
+        <div class="odometer odometer-auto-theme" id="subcount2" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
         <br>
         <h1><a href="https://www.youtube.com/channel/UCVHpvJNz3kRdxBwqSsRuK2A">Subscriber Wars Exploring</a></h1>
-        <div class="odometer odometer-auto-theme" id="subcount3" style="color: white; font-size: 10vh; background-color: transparent">0</div>
+        <div class="odometer odometer-auto-theme" id="subcount3" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
+
+        <h1>Twitter</h1>
+
+        <h1><a href=https://www.twitter.com/JayMBurton>@JayMBurton</a></h1>
+        <div class='odometer odometer-auto-theme' id="twitter" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
+
+        <h1>Twitch</h1>
+
+        <h1><a href=https://www.twitch.tv/subscriberwars>SubscriberWars</a></h1>
+        <div class='odometer odometer-auto-theme' id="twitch" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
+
+        <h1>TikTok</h1>
+
+        <h1><a href=https://www.tiktok.com/@subscriberwars>@subscriberwars</a></h1>
+        <div class='odometer odometer-auto-theme' id="tiktok" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
     </center>
 
 
@@ -35,8 +51,11 @@
        const subcount1 = document.getElementById('subcount1')
        const subcount2 = document.getElementById('subcount2')
        const subcount3 = document.getElementById('subcount3')
+       const twitter = document.getElementById('twitter')
+       const twitch = document.getElementById('twitch')
+       const tiktok = document.getElementById('tiktok')
 
-       //Subscriber Wars
+    //Subscriber Wars
         $(document).ready(function() {
            function loadchannel(name){
                var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCdKLd9f_8ZyDSKxMm16oRww&key=${youtubeKey}`
@@ -54,7 +73,7 @@
            }, 30000);
        })
 
-      //Subscriber Wars 2 
+    //Subscriber Wars 2 
        $(document).ready(function() {
            function loadchannel(name){
                var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCuEOWgNrCFBx9HrVwc09Eng&key=${youtubeKey}`
@@ -72,7 +91,7 @@
            }, 30000);
        })
 
-      //Subscriber Wars Gaming
+    //Subscriber Wars Gaming
        $(document).ready(function() {
            function loadchannel(name){
                var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCMCcezu9B4776VzmPhaTThw&key=${youtubeKey}`
@@ -90,7 +109,7 @@
            }, 30000);
        })
        
-      //Subscriber Wars Exploring 
+    //Subscriber Wars Exploring 
        $(document).ready(function() {
            function loadchannel(name){
                var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCVHpvJNz3kRdxBwqSsRuK2A&key=${youtubeKey}`
@@ -103,6 +122,60 @@
                var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCVHpvJNz3kRdxBwqSsRuK2A&key=${youtubeKey}`
                $.getJSON(url,function(data3){
                    subcount3.innerHTML=data3["items"][0].statistics.subscriberCount
+               })
+               
+           }, 30000);
+       })
+
+    //Twitter
+       $(document).ready(function() {
+           function loadchannel(name){
+               var url=`http://livecounts.space/api/twitter/user/JayMBurton`
+               $.getJSON(url,function(data4){
+                   twitter.innerHTML=data4.followers
+               })
+           }
+
+           setInterval(function(){
+               var url=`http://livecounts.space/api/twitter/user/JayMBurton`
+               $.getJSON(url,function(data4){
+                   twitter.innerHTML=data4.followers
+               })
+               
+           }, 30000);
+       })
+
+    //Twitch
+        $(document).ready(function() {
+           function loadchannel(name){
+               var url=`https://livecounts.space/api/twitch/user/445479678`
+               $.getJSON(url,function(data5){
+                   twitch.innerHTML=data5["channels"][0].followers
+               })
+           }
+
+           setInterval(function(){
+               var url=`https://livecounts.space/api/twitch/user/445479678`
+               $.getJSON(url,function(data5){
+                   twitch.innerHTML=data5["channels"][0].followers
+               })
+               
+           }, 30000);
+       })
+
+    //TikTok
+        $(document).ready(function() {
+           function loadchannel(name){
+               var url=`https://livecounts.space/api2_priv/tiktok_api/subscriberwars`
+               $.getJSON(url,function(data6){
+                   tiktok.innerHTML=data6.followerCount
+               })
+           }
+
+           setInterval(function(){
+               var url=`https://livecounts.space/api2_priv/tiktok_api/subscriberwars`
+               $.getJSON(url,function(data6){
+                   tiktok.innerHTML=data6.followerCount
                })
                
            }, 30000);
