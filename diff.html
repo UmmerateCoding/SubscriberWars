@@ -103,8 +103,8 @@ lineColor: '#7edeff'
         console.log(yeslol)
             var chartthingidk = yeslol
 			
- 
-if (chart.series[0].points.length == 543434543) chart.series[0].data[0].remove();
+ //543434543=infinite 1800=1h
+if (chart.series[0].points.length == 1800) chart.series[0].data[0].remove();
 chart.series[0].addPoint([Date.now(),parseFloat(chartthingidk)])
         }, 2000);
  
