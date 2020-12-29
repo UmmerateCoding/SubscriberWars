@@ -10,7 +10,7 @@
     
 </style>
 
-<center><br><br><br><h1>Zach King</h1><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+<center><br><br><br><h1>Spencer X</h1><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 <center><br><br><br><h1>Bella Poarch</h1><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 <center><br><br><br><h1>Bella 100M</h1><div class="odometer odometer-auto-theme" id="gap2" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 <center><br><br><br><h1>Zach Vs Bella</h1><div class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
@@ -33,7 +33,7 @@ var gap02 = 0;
 $(document).ready(function() {
 
         channelName = name;
-        var url = 'https://livecounts.io/api/tiktok-realtime/stats/zachking'
+        var url = 'https://livecounts.io/api/tiktok-realtime/stats/spencerx'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
             gap01 = parseFloat(data)
@@ -42,7 +42,7 @@ $(document).ready(function() {
     
     setInterval(function() {
     
-                    var url = 'https://livecounts.io/api/tiktok-realtime/stats/zachking'
+                    var url = 'https://livecounts.io/api/tiktok-realtime/stats/spencerx'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
             gap01 = parseFloat(data.followerCount)
