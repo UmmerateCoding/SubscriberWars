@@ -68,7 +68,7 @@ text: "Livecounts.io"
  
 series: [{
 showInLegend: false,
-name: 'Zach King',
+name: 'Spencer X',
 marker: { enabled: true },
 color: 'transparent',
 lineColor: '#ff0066'
@@ -85,7 +85,7 @@ lineColor: '#ff0066'
  
  
     $(document).ready(function() {
-        var url = 'https://livecounts.io/api/tiktok-realtime/stats/zachking'
+        var url = 'https://livecounts.io/api/tiktok-realtime/stats/spencerx'
         $.getJSON(url, function(data) {
             uhhh.innerHTML = followerCount
         });
@@ -98,7 +98,7 @@ lineColor: '#ff0066'
         $.getJSON(url, function(data) {
             uhhm.innerHTML = data.SubscriberCount
         });
-        var url1 = 'https://livecounts.io/api/tiktok-realtime/stats/zachking'
+        var url1 = 'https://livecounts.io/api/tiktok-realtime/stats/spencerx'
         $.getJSON(url1, function(data) {
           uhhh.innerHTML = data.followerCount
         });
