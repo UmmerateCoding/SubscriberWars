@@ -9,7 +9,7 @@
 </style>
 
 
-    <h1>Video 1</h1>
+    <h1>Mr Beast Rewind</h1>
        <br><h2>Views</h2><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 5vh; background-color: transparent">0</div> 
        <br><h2>Likes</h2><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 5vh; background-color: transparent">0</div>
        <br><h2>Dislikes</h2><div class="odometer odometer-auto-theme" id="count2" style="color: white; font-size: 5vh; background-color: transparent">0</div>
@@ -21,7 +21,7 @@
 <!-- Vid 1 -->
 $(document).ready(function() {
         
-		var url = 'https://livecounts.io/api/live-view-count/stats/f0c7pSCoZqE'
+		var url = 'https://livecounts.io/api/live-view-count/stats/PKtnafFtfEo'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
 			count1.innerHTML = (data.bottomOdos[0])
@@ -31,7 +31,7 @@ $(document).ready(function() {
         
     setInterval(function() {
     
-        var url = 'https://livecounts.io/api/live-view-count/stats/f0c7pSCoZqE'
+        var url = 'https://livecounts.io/api/live-view-count/stats/PKtnafFtfEo'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
 			count1.innerHTML = (data.bottomOdos[0])
