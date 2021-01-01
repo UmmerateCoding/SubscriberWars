@@ -10,7 +10,6 @@
 
 <center><br><br><br><h1>Loren Gray</h1><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 <center><br><br><br><h1>Bella Poarch</h1><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
-<center><br><br><br><h1>Bella 50M</h1><div class="odometer odometer-auto-theme" id="gap2" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 <center><br><br><br><h1>Loren Vs Bella</h1><div class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 
 
@@ -31,19 +30,19 @@ var gap02 = 0;
 $(document).ready(function() {
 
         channelName = name;
-        var url = 'https://livecounts.space/api2_priv/tiktok_api/lorengray'
+        var url = 'http://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
         $.getJSON(url, function(data) {
-            count.innerHTML = (data.followerCount)
+            count.innerHTML = (data.SubscriberCount)
             gap01 = parseFloat(data)
         });
         
     
     setInterval(function() {
     
-                    var url = 'https://livecounts.space/api2_priv/tiktok_api/lorengray'
+                    var url = 'http://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
         $.getJSON(url, function(data) {
-            count.innerHTML = (data.followerCount)
-            gap01 = parseFloat(data.followerCount)
+            count.innerHTML = (data.SubscriberCount)
+            gap01 = parseFloat(data.SubscriberCount)
         });
         
     }, 2000);
@@ -53,9 +52,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
-        var url1 = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
+        var url1 = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url1, function(data1) {
-            count1.innerHTML = (data1.followerCount)
+            count1.innerHTML = (data1.SubscriberCount)
             gap02 = parseFloat(data1)
             
         });
@@ -63,12 +62,11 @@ $(document).ready(function() {
     
     setInterval(function() {
     
-                    var url1 = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
+                    var url1 = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url1, function(data1) {
-            count1.innerHTML = (data1.followerCount)
-            gap02 = parseFloat(data1.followerCount)
+            count1.innerHTML = (data1.SubscriberCount)
+            gap02 = parseFloat(data1.SubscriberCount)
             gap.innerHTML = gap01-gap02;
-			gap2.innerHTML = 50000000-gap02;
         });
         
         
