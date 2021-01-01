@@ -62,16 +62,16 @@ minorGridLineColor: '#f0f0f0',
 tickColor: '#bdbdbd'
 },
 credits: {
-enabled: true,
+enabled: false,
 text: "Livecounts.io"
 },
  
 series: [{
 showInLegend: false,
 name: 'Bella Poarch',
-marker: { enabled: true },
+marker: { enabled: false },
 color: 'transparent',
-lineColor: '#ff0066'
+lineColor: '#ff0000'
 }]
 });
  
@@ -85,9 +85,9 @@ lineColor: '#ff0066'
  
  
     $(document).ready(function() {
-        var url = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+        var url = 'https://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
         $.getJSON(url, function(data) {
-            uhhh.innerHTML = followerCount
+            uhhh.innerHTML = SubscriberCount
         });
         var url = ''
         $.getJSON(url, function(data) {
@@ -98,9 +98,9 @@ lineColor: '#ff0066'
         $.getJSON(url, function(data) {
             uhhm.innerHTML = data.SubscriberCount
         });
-        var url1 = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+        var url1 = 'https://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
         $.getJSON(url1, function(data) {
-          uhhh.innerHTML = data.followerCount
+          uhhh.innerHTML = data.SubscriberCount
         });
  
         var yeslol = (uhhh.innerHTML)
