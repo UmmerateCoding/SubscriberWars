@@ -8,9 +8,9 @@
     
 </style>
 
-<center><br><br><br><h1>Loren Gray</h1><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
-<center><br><br><br><h1>Bella Poarch</h1><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
-<center><br><br><br><h1>Loren Vs Bella</h1><div class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+<center><br><br><br><h1>BHL</h1><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+<center><br><br><br><h1>MrBeast</h1><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+<center><br><br><br><h1>BHL VS Beast</h1><div class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 
 
 
@@ -30,7 +30,7 @@ var gap02 = 0;
 $(document).ready(function() {
 
         channelName = name;
-        var url = 'http://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
+        var url = 'https://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.SubscriberCount)
             gap01 = parseFloat(data)
@@ -39,7 +39,7 @@ $(document).ready(function() {
     
     setInterval(function() {
     
-                    var url = 'http://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
+                    var url = 'https://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.SubscriberCount)
             gap01 = parseFloat(data.SubscriberCount)
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
-        var url1 = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+        var url1 = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url1, function(data1) {
             count1.innerHTML = (data1.SubscriberCount)
             gap02 = parseFloat(data1)
@@ -62,7 +62,7 @@ $(document).ready(function() {
     
     setInterval(function() {
     
-                    var url1 = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+                    var url1 = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url1, function(data1) {
             count1.innerHTML = (data1.SubscriberCount)
             gap02 = parseFloat(data1.SubscriberCount)
