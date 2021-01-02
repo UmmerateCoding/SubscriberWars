@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+ 
+<style>
+  #a {
+    text-align: center;
+	width: 400px;
+	color: white;
+	font-weight: 500;
+	font-size: 2.5vh;
+	background-color: black;
+  }
+ 
+  * {
+    height: 1px !Important;
+	font-family: lato;
+  }
+ 
+  body {
+  background-color: black
+  }
+ 
+  table {
+  background-color: black;
+  border: 4px solid white;
+  border-collapse: collapse;
+  border-radius: 0px;
+  height: 50px;
+  width: 100%;
+  font-size: 3.5vh;
+  }
+ 
+  td {
+  border: 2px solid white;
+  width: ;
+  }
+ 
+</style>
+ 
+ 
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+ 
+<body>
+  <table style="" border="">
+    <tbody>
+      <tr style="color: white;">
+        <td id="a">Channel</td>
+        <td id="a">1 min avg</td>
+		<td id="a">5 min avg</td>
+        <td id="a">1 hr avg</td>
+        <td id="a">12 hr avg</td>
+        <td id="a">1 day avg</td>
+        <td id="a">7 day avg</td>
+		<td id="a">30 day avg</td>
+      </tr>
+      <tr>
+        <td id="name1" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">Subs</td>
+        <td id="min1" style="width: 525.33px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0<p>
+		<td id="fivemin1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="hr1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="thr1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="day1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="week1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+		<td id="month1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+      </tr>
+ 
+      <tr>
+        <td id="name2" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">Views</td>
+        <td id="min2" style="width: 525.33px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+		<td id="fivemin2" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="hr2" style="width: 505.67px !Important; height: 1px !Important; color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="thr2" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="day2" style="width: 505.67px !Important; height: 1px !Important; color: white; font-size: 2.5vh; background-color: black;">0</td>
+        <td id="week2" style="width: 505.67px !Important; height: 1px !Important; color: white; font-size: 2.5vh; background-color: black;">0</td>
+		<td id="month2" style="width: 505.67px !Important; height: 1px !Important; color: white; font-size: 2.5vh; background-color: black;">0</td>
+      </tr>
+      </tr>
+ 
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+</body>
+ 
+ 
+<script type="text/javascript">
+  var avg = [];
+  var avg1 = [];
+  var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA';  
+  var url1 = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'; 
+ 
+ 
+ 
+ 
+ 
+ 
+   $(document).ready(function () {
+ 
+    $.getJSON(url, function (data) {
+      avg.push(Math.floor(data.SubscriberCount));
+      if (avg.length >= 10) { avg.shift() }
+      var count = 0;
+      for (var i = 0; i < avg.length; i++) {
+        console.log(i)
+        if (i == 0) {
+          count = count + (avg[i] - parseFloat(avg[i]))
+        } else {
+          count = count + (parseFloat(avg[i]) - parseFloat(avg[i - 1]))
+        }
+      }
+      var deta = count / avg.length
+      min1.innerHTML = Math.round(deta * 6)
+    });
+ 
+ 
+    var avg = [];
+ 
+    setInterval(function () {
+ 
+      $.getJSON(url, function (data) {
+ 
+ 
+ 
+        avg.push(Math.floor(data.SubscriberCount))
+        if (avg.length >= 10) { avg.shift() }
+        var count = 0;
+        for (var i = 0; i < avg.length; i++) {
+         console.log(i)
+          if (i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i - 1]))
+          }
+        }
+        var deta = count / avg.length
+        var lol = Math.trunc(deta * 6)
+        var lol2 = Math.trunc(deta * 30)
+		var lol3 = Math.trunc(deta * 360)
+        var lol4 = Math.trunc(deta * 4320)
+        var lol5 = Math.trunc(deta * 8640)
+        var lol6 = Math.trunc(deta * 60480)
+		var lol7 = Math.trunc(deta * 259200)
+ 
+        var ActualMinuteValue = numeral(lol).format('0,0');
+        var ActualMinuteValue2 = numeral(lol2).format('0,0');
+        var ActualMinuteValue3 = numeral(lol3).format('0,0');
+        var ActualMinuteValue4 = numeral(lol4).format('0,0');
+        var ActualMinuteValue5 = numeral(lol5).format('0,0');
+        var ActualMinuteValue6 = numeral(lol6).format('0,0');
+		var ActualMinuteValue7 = numeral(lol7).format('0,0');
+ 
+ 
+ 
+        min1.innerHTML = ActualMinuteValue
+		fivemin1.innerHTML = ActualMinuteValue2
+        hr1.innerHTML = ActualMinuteValue3
+        thr1.innerHTML = ActualMinuteValue4
+        day1.innerHTML = ActualMinuteValue5
+        week1.innerHTML = ActualMinuteValue6
+		month1.innerHTML = ActualMinuteValue7
+ 
+    });
+ 
+    }, 10000);
+   var avg1 = [];
+    setInterval(function (data1) {
+        $.getJSON(url1, function (data1) {
+      avg1.push(Math.floor(data1.totalviews));
+      if (avg1.length >= 10) { avg1.shift() }
+      var count1 = 0;
+      for (var i1 = 0; i1 < avg1.length; i1++) {
+        console.log(i1)
+        if (i1 == 0) {
+          count1 = count1 + (avg1[i1] - parseFloat(avg1[i1]))
+        } else {
+          count1 = count1 + (parseFloat(avg1[i1]) - parseFloat(avg1[i1 - 1]))
+        }
+      }
+      var deta1 = count1 / avg1.length
+ 
+ 
+ 
+ 
+        var lol11 = Math.trunc(deta1 * 6)
+		var lol12 = Math.trunc(deta1 * 30)
+        var lol13 = Math.trunc(deta1 * 360)
+        var lol14 = Math.trunc(deta1 * 4320)
+        var lol15 = Math.trunc(deta1 * 8640)
+        var lol16 = Math.trunc(deta1 * 60480)
+		var lol17 = Math.trunc(deta1 * 259200)
+ 
+        var ActualMinuteValue11 = numeral(lol11).format('0,0');
+        var ActualMinuteValue12 = numeral(lol12).format('0,0');
+        var ActualMinuteValue13 = numeral(lol13).format('0,0');
+        var ActualMinuteValue14 = numeral(lol14).format('0,0');
+        var ActualMinuteValue15 = numeral(lol15).format('0,0');
+        var ActualMinuteValue16 = numeral(lol16).format('0,0');
+		var ActualMinuteValue17 = numeral(lol17).format('0,0');
+ 
+ 
+ 
+        min2.innerHTML = ActualMinuteValue11
+		fivemin2.innerHTML = ActualMinuteValue12
+        hr2.innerHTML = ActualMinuteValue13
+        thr2.innerHTML = ActualMinuteValue14
+        day2.innerHTML = ActualMinuteValue15
+        week2.innerHTML = ActualMinuteValue16
+		month2.innerHTML = ActualMinuteValue17
+    });
+ 
+    }, 10000);
+  });
+ 
+</script>
+</html>
