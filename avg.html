@@ -57,7 +57,7 @@
 		<td id="a">30 day avg</td>
       </tr>
       <tr>
-        <td id="name1" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">BHL</td>
+        <td id="name1" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">Hearts</td>
         <td id="min1" style="width: 525.33px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0<p>
 		<td id="fivemin1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
         <td id="hr1" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
@@ -68,7 +68,7 @@
       </tr>
  
       <tr>
-        <td id="name2" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">Beast</td>
+        <td id="name2" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">Followers</td>
         <td id="min2" style="width: 525.33px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
 		<td id="fivemin2" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
         <td id="hr2" style="width: 505.67px !Important; height: 1px !Important; color: white; font-size: 2.5vh; background-color: black;">0</td>
@@ -89,8 +89,8 @@
 <script type="text/javascript">
   var avg = [];
   var avg1 = [];
-  var url = 'https://livecounts.space/api/youtube/estimated/user/UC3IZKseVpdzPSBaWxBxundA';  
-  var url1 = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'; 
+  var url = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch';  
+  var url1 = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'; 
  
  
  
@@ -100,7 +100,7 @@
    $(document).ready(function () {
  
     $.getJSON(url, function (data) {
-      avg.push(Math.floor(data.SubscriberCount));
+      avg.push(Math.floor(data.heartsCount));
       if (avg.length >= 10) { avg.shift() }
       var count = 0;
       for (var i = 0; i < avg.length; i++) {
@@ -124,7 +124,7 @@
  
  
  
-        avg.push(Math.floor(data.SubscriberCount))
+        avg.push(Math.floor(data.heartsCount))
         if (avg.length >= 10) { avg.shift() }
         var count = 0;
         for (var i = 0; i < avg.length; i++) {
@@ -168,7 +168,7 @@
    var avg1 = [];
     setInterval(function (data1) {
         $.getJSON(url1, function (data1) {
-      avg1.push(Math.floor(data1.SubscriberCount));
+      avg1.push(Math.floor(data1.followerCount));
       if (avg1.length >= 10) { avg1.shift() }
       var count1 = 0;
       for (var i1 = 0; i1 < avg1.length; i1++) {
