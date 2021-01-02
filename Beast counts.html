@@ -1,0 +1,60 @@
+<body>
+    <link rel="stylesheet" href="odometer-theme-minimal.css">
+    <script src="odometer.js"></script>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+
+<style>
+    *{font-family: Lato !Important; background-color: black; color: white;}
+    
+</style>
+
+<center><br><br><br><h1>MrBeast</h1><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+
+<center><br><br><br><h1>Goal</h1><div class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
+
+
+
+
+</body>
+
+
+<script type="text/javascript">
+
+var gap01 = 0;
+
+
+$(document).ready(function() {
+    var channelName = "";
+    
+    loadChannel("aa")
+    
+    function loadChannel(name) {
+        channelName = name;
+        var url = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+        $.getJSON(url, function(data) {
+            count.innerHTML = (data.SubscriberCount)
+            gap01 = parseFloat(data)
+        });
+        
+    }
+    
+    setInterval(function() {
+    
+                    var url = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+        $.getJSON(url, function(data) {
+            count.innerHTML = (data.SubscriberCount)
+            gap01 = parseFloat(data.SubscriberCount)
+			gap.innerHTML = 50000000-gap01;
+        });
+        
+    }, 2000);
+    
+    
+});
+
+
+
+
+</script>
+
