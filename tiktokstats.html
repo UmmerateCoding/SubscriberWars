@@ -13,21 +13,22 @@
        <br><h2>Followers</h2><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div> 
        <br><h2>Hearts</h2><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 10vh; background-color: transparent">0</div>
        <br><h2>Following</h2><div class="odometer odometer-auto-theme" id="count2" style="color: white; font-size: 10vh; background-color: transparent">0</div>
-       <br><h2>Videos</h2><div class="odometer odometer-auto-theme" id="count3" style="color: white; font-size: 10vh; background-color: transparent">0</div>
     </center>
 	
 
 
 <script type="text/javascript">
-<!-- Vid 1 -->
+var gap01 =0;
+	
 $(document).ready(function() {
         
 		var url = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
 	    count1.innerHTML = (data.heartsCount)
-	    count2.innerHTML = (data.followingCount)
-	    count3.innerHtml = (data.awemeCount)
+	    
+		gap01 = parseFloat(data.heartsCount)
+	   
 			
         });
         
@@ -37,8 +38,11 @@ $(document).ready(function() {
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
 	    count1.innerHTML = (data.heartsCount)
-	    count2.innerHTML = (data.followingCount)
-	    count3.innerHtml = (data.awemeCount)
+	    
+		gap01 = parseFloat(data.heartsCount)
+		count2.innerHTML = 1000000000-gap01;
+		
+	    
 
         });
         
