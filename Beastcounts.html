@@ -13,7 +13,7 @@
 
 <center><br><br><br><h1>Goal</h1><div class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 
-
+<center><br><br><br><h1>total views</h1><div class="odometer odometer-auto-theme" id="views" style="color: white; font-size: 10vh; background-color: transparent">0</div><br></center>
 
 
 </body>
@@ -33,7 +33,8 @@ $(document).ready(function() {
         channelName = name;
         var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url, function(data) {
-            count.innerHTML = (data.SubscriberCount)
+            count.innerHTML = data.SubscriberCount
+	    views.innerHTML = data.totalviews
             gap01 = parseFloat(data)
         });
         
@@ -43,7 +44,8 @@ $(document).ready(function() {
     
                     var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url, function(data) {
-            count.innerHTML = (data.SubscriberCount)
+            count.innerHTML = data.SubscriberCount
+	    views.innerHTML = data.totalviews
             gap01 = parseFloat(data.SubscriberCount)
 			gap.innerHTML = 50000000-gap01;
         });
