@@ -31,7 +31,7 @@ $(document).ready(function() {
     
     function loadChannel(name) {
         channelName = name;
-        var url = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+        var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.SubscriberCount)
             gap01 = parseFloat(data)
@@ -41,7 +41,7 @@ $(document).ready(function() {
     
     setInterval(function() {
     
-                    var url = 'http://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+                    var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.SubscriberCount)
             gap01 = parseFloat(data.SubscriberCount)
