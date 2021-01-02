@@ -85,9 +85,9 @@ lineColor: '#ff0000'
  
  
     $(document).ready(function() {
-        var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+        var url = 'https://livecounts.io/youtube-live-subscriber-count/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url, function(data) {
-            uhhh.innerHTML = SubscriberCount
+            uhhh.innerHTML = followerCount
         });
         var url = ''
         $.getJSON(url, function(data) {
@@ -98,9 +98,9 @@ lineColor: '#ff0000'
         $.getJSON(url, function(data) {
             uhhm.innerHTML = data.SubscriberCount
         });
-        var url1 = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
+        var url1 = 'https://livecounts.io/youtube-live-subscriber-count/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url1, function(data) {
-          uhhh.innerHTML = data.SubscriberCount
+          uhhh.innerHTML = data.followerCount
         });
  
         var yeslol = (uhhh.innerHTML)
