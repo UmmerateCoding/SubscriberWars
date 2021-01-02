@@ -22,7 +22,7 @@
 <!-- Vid 1 -->
 $(document).ready(function() {
         
-		var url = 'http://livecounts.space/api2_priv/tiktok_api/bellapoarch'
+		var url = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
 	    count1.innerHTML = (data.heartsCount)
@@ -33,7 +33,7 @@ $(document).ready(function() {
         
     setInterval(function() {
     
-        var url = 'http://livecounts.space/api2_priv/tiktok_api/bellapoarch'
+        var url = 'https://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
 	    count1.innerHTML = (data.heartsCount)
