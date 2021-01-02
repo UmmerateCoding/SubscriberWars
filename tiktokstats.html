@@ -9,11 +9,12 @@
 </style>
 
 
-    <h1>Bella Poarch</h1>
-       <br><h2>Followers</h2><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 5vh; background-color: transparent">0</div> 
-       <br><h2>Hearts</h2><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 5vh; background-color: transparent">0</div>
-       <br><h2>Following</h2><div class="odometer odometer-auto-theme" id="count2" style="color: white; font-size: 5vh; background-color: transparent">0</div>
-       <br><h2>Videos</h2><div class="odometer odometer-auto-theme" id="count3" style="color: white; font-size: 5vh; background-color: transparent">0</div>
+    <center><h1>Bella Poarch</h1>
+       <br><h2>Followers</h2><div class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 10vh; background-color: transparent">0</div> 
+       <br><h2>Hearts</h2><div class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 10vh; background-color: transparent">0</div>
+       <br><h2>Following</h2><div class="odometer odometer-auto-theme" id="count2" style="color: white; font-size: 10vh; background-color: transparent">0</div>
+       <br><h2>Videos</h2><div class="odometer odometer-auto-theme" id="count3" style="color: white; font-size: 10vh; background-color: transparent">0</div>
+    </center>
 	
 
 
@@ -21,23 +22,23 @@
 <!-- Vid 1 -->
 $(document).ready(function() {
         
-		var url = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+		var url = 'http://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
-	    count1.innerHTML = (data.bottomOdos[0])
-	    count2.innerHTML = (data.bottomOdos[1])
-	    count3.innerHtml = (data.bottomOdos[2])
+	    count1.innerHTML = (data.heartsCount)
+	    count2.innerHTML = (data.followingCount)
+	    count3.innerHtml = (data.awemeCount)
 			
         });
         
     setInterval(function() {
     
-        var url = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
+        var url = 'http://livecounts.space/api2_priv/tiktok_api/bellapoarch'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
-	    count1.innerHTML = (data.bottomOdos[0])
-	    count2.innerHTML = (data.bottomOdos[1])
-	    count3.innerHtml = (data.bottomOdos[2])
+	    count1.innerHTML = (data.heartsCount)
+	    count2.innerHTML = (data.followingCount)
+	    count3.innerHtml = (data.awemeCount)
 
         });
         
