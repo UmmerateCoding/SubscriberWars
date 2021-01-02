@@ -24,9 +24,9 @@ $(document).ready(function() {
 		var url = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
-	    count1.innerHTML = (data.bottomOdos.0)
-	    count2.innerHTML = (data.bottomOdos.1)
-	    count3.innerHtml = (data.bottomOdos.2)
+	    count1.innerHTML = (data.bottomOdos.[0])
+	    count2.innerHTML = (data.bottomOdos.[1])
+	    count3.innerHtml = (data.bottomOdos.[2])
 			
         });
         
@@ -35,9 +35,9 @@ $(document).ready(function() {
         var url = 'https://livecounts.io/api/tiktok-realtime/stats/bellapoarch'
         $.getJSON(url, function(data) {
             count.innerHTML = (data.followerCount)
-	    count1.innerHTML = (data.bottomOdos.0)
-	    count2.innerHTML = (data.bottomOdos.1)
-	    count3.innerHtml = (data.bottomOdos.2)
+	    count1.innerHTML = (data.bottomOdos.[0])
+	    count2.innerHTML = (data.bottomOdos.[1])
+	    count3.innerHtml = (data.bottomOdos.[2])
 
         });
         
