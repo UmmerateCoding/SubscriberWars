@@ -21,7 +21,7 @@
 <!-- Vid 1 -->
 $(document).ready(function() {
         
-		var url = 'http://livecounts.space/api/yt/video/PKtnafFtfEo'
+		var url = 'https://livecounts.space/api/yt/video/PKtnafFtfEo'
         $.getJSON(url, function(data) {
             count.innerHTML = data.items[0].statistics.viewCount
 			count1.innerHTML = data.items[0].statistics.likeCount
@@ -31,7 +31,7 @@ $(document).ready(function() {
         
     setInterval(function() {
     
-        var url = 'http://livecounts.space/api/yt/video/PKtnafFtfEo'
+        var url = 'https://livecounts.space/api/yt/video/PKtnafFtfEo'
         $.getJSON(url, function(data) {
             count.innerHTML = data.items[0].statistics.viewCount
 			count1.innerHTML = data.items[0].statistics.likeCount
