@@ -25,27 +25,14 @@ var gap01 = 0;
 
 
 $(document).ready(function() {
-    var channelName = "";
-    
-    loadChannel("aa")
-    
-    function loadChannel(name) {
-        channelName = name;
-        var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
-        $.getJSON(url, function(data) {
-            count.innerHTML = data.SubscriberCount
-	    views.innerHTML = data.totalviews
-            gap01 = parseFloat(data)
-        });
-        
-    }
+
     
     setInterval(function() {
     
                     var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'
         $.getJSON(url, function(data) {
             count.innerHTML = data.SubscriberCount
-	    views.innerHTML = data.totalviews
+	    views.innerHTML = data.totalviewsAPI
             gap01 = parseFloat(data.SubscriberCount)
 			gap.innerHTML = 50000000-gap01;
         });
