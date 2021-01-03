@@ -68,7 +68,7 @@
       </tr>
  
       <tr>
-        <td id="name2" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">Views</td>
+        <td id="name2" style="width: 502px; color: white; font-size: 2.5vh; background-color: black;">RW Likes</td>
         <td id="min2" style="width: 525.33px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
 		<td id="fivemin2" style="width: 505.67px !Important; height: 1px !Important;color: white; font-size: 2.5vh; background-color: black;">0</td>
         <td id="hr2" style="width: 505.67px !Important; height: 1px !Important; color: white; font-size: 2.5vh; background-color: black;">0</td>
@@ -90,7 +90,7 @@
   var avg = [];
   var avg1 = [];
   var url = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA';  
-  var url1 = 'https://livecounts.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA'; 
+  var url1 = 'http://livecounts.space/api/yt/video/PKtnafFtfEo'; 
  
  
  
@@ -168,7 +168,7 @@
    var avg1 = [];
     setInterval(function (data1) {
         $.getJSON(url1, function (data1) {
-      avg1.push(Math.floor(data1.totalviews));
+      avg1.push(Math.floor(data1.items[0].statistics.likeCount));
       if (avg1.length >= 10) { avg1.shift() }
       var count1 = 0;
       for (var i1 = 0; i1 < avg1.length; i1++) {
