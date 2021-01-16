@@ -1,0 +1,249 @@
+<head>
+    <link rel="stylesheet" href="odometer-theme-minimal.css">
+    <script src="odometer.js"></script>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+</body>
+
+<style>
+    * {color: white; font-family: Lato;}
+    body {background-color: black;}
+    #you1 {position: absolute; top: 22.5; left: 5; font-size: 30px;}
+    #you2 {position: absolute; top: 97.5; left: 5; font-size: 30px;}
+    #you3 {position: absolute; top: 172.5; left: 5; font-size: 30px;}
+    #you4 {position: absolute; top: 247.5; left: 5; font-size: 30px;}
+    #you5 {position: absolute; top: 322.5; left: 5; font-size: 30px;}
+    #you6 {position: absolute; top: 397.5; left: 5; font-size: 30px;}
+    #you7 {position: absolute; top: 472.5; left: 5; font-size: 30px;}
+    #you8 {position: absolute; top: 547.5; left: 5; font-size: 30px;}
+    #you9 {position: absolute; top: 622.5; left: 5; font-size: 30px;}
+    #you10 {position: absolute; top: 697.5; left: 5; font-size: 30px;}
+    #you11 {position: absolute; top: 22.5; left: 350; font-size: 30px;}
+    #you12 {position: absolute; top: 97.5; left: 350; font-size: 30px;}
+    #you13 {position: absolute; top: 172.5; left: 350; font-size: 30px;}
+    #you14 {position: absolute; top: 247.5; left: 350; font-size: 30px;}
+    #you15 {position: absolute; top: 322.5; left: 350; font-size: 30px;}
+    #you16 {position: absolute; top: 397.5; left: 350; font-size: 30px;}
+    #you17 {position: absolute; top: 472.5; left: 350; font-size: 30px;}
+    #you18 {position: absolute; top: 547.5; left: 350; font-size: 30px;}
+    #you19 {position: absolute; top: 622.5; left: 350; font-size: 30px;}
+    #you20 {position: absolute; top: 697.5; left: 350; font-size: 30px;}
+    #image1 {position: absolute; top: 5; left: 40; object-fit: cover;} 
+    #image2 {position: absolute; top: 80; left: 40; object-fit: cover;}
+    #image3 {position: absolute; top: 155; left: 40; object-fit: cover;}
+    #image4 {position: absolute; top: 230; left: 40; object-fit: cover;}
+    #image5 {position: absolute; top: 305; left: 40; object-fit: cover;}
+    #image6 {position: absolute; top: 380; left: 40; object-fit: cover;}
+    #image7 {position: absolute; top: 455; left: 40; object-fit: cover;}
+    #image8 {position: absolute; top: 530; left: 40; object-fit: cover;}
+    #image9 {position: absolute; top: 605; left: 40; object-fit: cover;}
+    #image10 {position: absolute; top: 680; left: 40; object-fit: cover;}
+    #image11 {position: absolute; top: 5; left: 390; object-fit: cover;}
+    #image12 {position: absolute; top: 80; left: 390; object-fit: cover;}
+    #image13 {position: absolute; top: 155; left: 390; object-fit: cover;}
+    #image14 {position: absolute; top: 230; left: 390; object-fit: cover;}
+    #image15 {position: absolute; top: 305; left: 390; object-fit: cover;}
+    #image16 {position: absolute; top: 380; left: 390; object-fit: cover;}
+    #image17 {position: absolute; top: 455; left: 390; object-fit: cover;}
+    #image18 {position: absolute; top: 530; left: 390; object-fit: cover;}
+    #image19 {position: absolute; top: 605; left: 390; object-fit: cover;}
+    #image20 {position: absolute; top: 680; left: 390; object-fit: cover;}
+    #name1 {position: absolute;top: 5; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;} 
+    #name2 {position: absolute;top: 80; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name3 {position: absolute;top: 155; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name4 {position: absolute;top: 230; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name5 {position: absolute;top: 305; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name6 {position: absolute;top: 380; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name7 {position: absolute;top: 455; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name8 {position: absolute;top: 530; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name9 {position: absolute;top: 605; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name10 {position: absolute;top: 680; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name11 {position: absolute;top: 5; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name12 {position: absolute;top: 80; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name13 {position: absolute;top: 155; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name14 {position: absolute;top: 230; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name15 {position: absolute;top: 305; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name16 {position: absolute;top: 380; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name17 {position: absolute;top: 455; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name18 {position: absolute;top: 530; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name19 {position: absolute;top: 605; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name20 {position: absolute;top: 680; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #count1 {position: absolute; top: 30; left: 120; font-size: 35px;}
+    #count2 {position: absolute; top: 105; left: 120; font-size: 35px;}
+    #count3 {position: absolute; top: 180; left: 120; font-size: 35px;}
+    #count4 {position: absolute; top: 255; left: 120; font-size: 35px;}
+    #count5 {position: absolute; top: 330; left: 120; font-size: 35px;}
+    #count6 {position: absolute; top: 405; left: 120; font-size: 35px;}
+    #count7 {position: absolute; top: 480; left: 120; font-size: 35px;}
+    #count8 {position: absolute; top: 555; left: 120; font-size: 35px;}
+    #count9 {position: absolute; top: 630; left: 120; font-size: 35px;}
+    #count10 {position: absolute; top: 705; left: 120; font-size: 35px;}
+    #count11 {position: absolute; top: 30; left: 470; font-size: 35px;}
+    #count12 {position: absolute; top: 105; left: 470; font-size: 35px;}
+    #count13 {position: absolute; top: 180; left: 470; font-size: 35px;}
+    #count14 {position: absolute; top: 255; left: 470; font-size: 35px;}
+    #count15 {position: absolute; top: 330; left: 470; font-size: 35px;}
+    #count16 {position: absolute; top: 405; left: 470; font-size: 35px;}
+    #count17 {position: absolute; top: 480; left: 470; font-size: 35px;}
+    #count18 {position: absolute; top: 555; left: 470; font-size: 35px;}
+    #count19 {position: absolute; top: 630; left: 470; font-size: 35px;}
+    #count20 {position: absolute; top: 705; left: 470; font-size: 35px;}
+    
+</style>
+
+<!--1-->
+<span id="you1">01</span>
+<img id="image1" src="https://p16-va.tiktokcdn.com/musically-maliva-obj/0a0242e5f906bf9301f859c568b5ecc4~c5_720x720.jpeg?x-expires=1610841600&x-signature=HrkmqGFxyZXWG%2Ft9xSExAF1PxuQ%3D" height="70" width="70">
+<span id="name1">charli d'amelio</span>
+<span id="count1" class="odometer odometer-auto-theme"></span>
+<!--2-->
+<span id="you2">02</span>
+<img id="image2" src="https://p16-va.tiktokcdn.com/tos-maliva-avt-0068/405de1b80aec24593e3e71e4fa61f142~c5_720x720.jpeg?x-expires=1610841600&x-signature=NH63LvcAP4OWn1dTMAsH6V3zeb0%3D" height="70" width="70">
+<span id="name2">addison rae</span>
+<span id="count2" class="odometer odometer-auto-theme"></span>
+<!--3-->
+<span id="you3">03</span>
+<img id="image3" src="https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/smgf5f369c884044a8df770614bbfd64717.jpeg?x-expires=1610841600&x-signature=TBSUA36rpMFamrw3yuByDSo7QWk%3D" height="70" width="70">
+<span id="name3">Zach King</span>
+<span id="count3" class="odometer odometer-auto-theme"></span>
+<!--4-->
+<span id="you4">04</span>
+<img id="image4" src="https://p16-va.tiktokcdn.com/tos-maliva-avt-0068/ef8f66d68b4d5c2e0051e80c909d42e1~c5_720x720.jpeg?x-expires=1610708400&x-signature=%2B5LIN5lq1malh0R4MD6G4%2FBO%2F8I%3D" height="70" width="70">
+<span id="name4">Bella Poarch</span>
+<span id="count4" class="odometer odometer-auto-theme"></span>
+<!--5-->
+<span id="you5">05</span>
+<img id="image5" src="https://p16-va.tiktokcdn.com/musically-maliva-obj/4d74c83e81a78f498b92763633b77aa8~c5_720x720.jpeg?x-expires=1610553600&x-signature=bF%2FJYYJDNoiLfT5QGxBEL4RLmx0%3D" height="70" width="70">
+<span id="name5">Spencer X</span>
+<span id="count5" class="odometer odometer-auto-theme"></span>
+<!--6-->
+<span id="you6">06</span>
+<img id="image6" src="https://p16-va.tiktokcdn.com/tos-maliva-avt-0068/ad91aefc1585e844fc18b27a9c5ec723~c5_720x720.jpeg?x-expires=1610553600&x-signature=Zo%2BmHcJfNxyrl6WcEEpszREwpxE%3D" height="70" width="70">
+<span id="name6">Loren Gray</span>
+<span id="count6" class="odometer odometer-auto-theme"></span>
+<!--7-->
+<span id="you7">07</span>
+<img id="image7" src="https://p16-va.tiktokcdn.com/musically-maliva-obj/1645136815763462~c5_720x720.jpeg?x-expires=1610553600&x-signature=kpZhmfMZl0XD51yZ%2FoS83woP6w0%3D" height="70" width="70">
+<span id="name7">TikTok</span>
+<span id="count7" class="odometer odometer-auto-theme"></span>
+<!--8-->
+<span id="you8">08</span>
+<img id="image8" src="https://p16-va.tiktokcdn.com/tos-maliva-avt-0068/fcde87c0ef72b96afcc30a20438c20bc~c5_720x720.jpeg?x-expires=1610553600&x-signature=mvGxyf%2FhG%2B8H24gv6r0ERY%2BA42I%3D" height="70" width="70">
+<span id="name8">dixie 🤍</span>
+<span id="count8" class="odometer odometer-auto-theme"></span>
+<!--9-->
+<span id="you9">09</span>
+<img id="image9" src="https://p16-va.tiktokcdn.com/musically-maliva-obj/1646315618666501~c5_720x720.jpeg?x-expires=1610553600&x-signature=hgp2JH%2BPI6N2aOftikUdq4wh5gU%3D" height="70" width="70">
+<span id="name9">Will Smith</span>
+<span id="count9" class="odometer odometer-auto-theme"></span>
+<!--10-->
+<span id="you10">10</span>
+<img id="image10" src="https://p16-va.tiktokcdn.com/musically-maliva-obj/52d5a27a08dee116adc908aa715bd31b~c5_720x720.jpeg?x-expires=1610553600&x-signature=%2FJm3fXrpaHiLRbehTOkMq7Yg6Y4%3D" height="70" width="70">
+<span id="name10">Michael Le</span>
+<span id="count10" class="odometer odometer-auto-theme"></span>
+<!--11-->
+<span id="you11">11</span>
+<img id="image11" src="https://p16-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/1659291656883201.jpeg?x-expires=1610553600&x-signature=3IGwWfB7RgwUPddvsRbouusacjo%3D" height="70" width="70">
+<span id="name11">Riyaz</span>
+<span id="count11" class="odometer odometer-auto-theme"></span>
+<!--12-->
+<span id="you12">12</span>
+<img id="image12" src="https://p16-va.tiktokcdn.com/musically-maliva-obj/1656115901452294~c5_720x720.jpeg?x-expires=1610553600&x-signature=%2BowDqkFO38xEV4gUu2rupMOU3rQ%3D" height="70" width="70">
+<span id="name12">Jason Derulo</span>
+<span id="count12" class="odometer odometer-auto-theme"></span>
+<!--13-->
+<span id="you13">13</span>
+<img id="image13" src="https://p16-va.tiktokcdn.com/musically-maliva-obj/f50a0c33b24a92cbc1bb0c2ef7f5b6bc~c5_720x720.jpeg?x-expires=1610553600&x-signature=kQgrPe8aAQ%2FCWO26OOkfc6G2NJI%3D" height="70" width="70">
+<span id="name13">Brent Rivera</span>
+<span id="count13" class="odometer odometer-auto-theme"></span>
+<!--14-->
+<span id="you14">14</span>
+<img id="image14" src="https://p16-va.tiktokcdn.com/tos-maliva-avt-0068/04393d98778226ff8bd7282b13b17eb9~c5_720x720.jpeg?x-expires=1610553600&x-signature=W21dwAYyndQS3g7m3kF%2FMF%2BG4qk%3D" height="70" width="70">
+<span id="name14">BabyAriel</span>
+<span id="count14" class="odometer odometer-auto-theme"></span>
+<!--15-->
+<span id="you15">15</span>
+<img id="image15" src="https://p16-sg.tiktokcdn.com/musically-maliva-obj/4517f36c0e2e1aca9297f26bd863bdee~c5_720x720.jpeg?x-expires=1610553600&x-signature=KLAaU4Vx%2BAh5CUXpU6RrZqFx1%2BI%3D" height="70" width="70">
+<span id="name15">Kimberly Loaiza ✨</span>
+<span id="count15" class="odometer odometer-auto-theme"></span>
+<!--16-->
+<span id="you16">16</span>
+<img id="image16" src="https://p16-va.tiktokcdn.com/tos-maliva-avt-0068/8c933ab080d3a54166416afaa3c19cc3~c5_720x720.jpeg?x-expires=1610553600&x-signature=snT9ccIDv27xlJ0zpb5L2etjzio%3D" height="70" width="70">
+<span id="name16">James Charles</span>
+<span id="count16" class="odometer odometer-auto-theme"></span>
+<!--17-->
+<span id="you17">17</span>
+<img id="image17" src="https://p16-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/1661407671415809.jpeg?x-expires=1610553600&x-signature=JUvqQovPGnKboCA%2BSGNEoOkfxlE%3D" height="70" width="70">
+<span id="name17">Faisal shaikh</span>
+<span id="count17" class="odometer odometer-auto-theme"></span>
+<!--18-->
+<span id="you18">18</span>
+<img id="image18" src="https://p16-sg.tiktokcdn.com/aweme/720x720/tos-alisg-avt-0068/fd690c7d7e8de72bd0f82fd62ee5f146.jpeg?x-expires=1610553600&x-signature=%2FYomMqEz4yNIRgEMS6b9b6iXXkY%3D" height="70" width="70">
+<span id="name18">cznburak</span>
+<span id="count18" class="odometer odometer-auto-theme"></span>
+<!--19-->
+<span id="you19">19</span>
+<img id="image19" src="https://p16-sg.tiktokcdn.com/musically-maliva-obj/0fce9043a814ed92a84b3efb6442b37c~c5_720x720.jpeg?x-expires=1610553600&x-signature=pVSjqHQ%2BMaHW4kYDWAINzxmxoyY%3D" height="70" width="70">
+<span id="name19">GIL CROES</span>
+<span id="count19" class="odometer odometer-auto-theme"></span>
+<!--20-->
+<span id="you20">20</span>
+<img id="image20" src="https://p16-va.tiktokcdn.com/tos-maliva-avt-0068/bbff291840233bc3239faee48046b096~c5_720x720.jpeg?x-expires=1610553600&x-signature=SScDuvs5J%2BqaQKkiPdIid%2Bem580%3D" height="70" width="70">
+<span id="name20">JoJo Siwa</span>
+<span id="count20" class="odometer odometer-auto-theme"></span>
+
+<script type="text/javascript">
+
+    const tiktok='https://livecounts.space/api2_priv/tiktok_api/'
+        
+    setInterval(function() {
+            var url1 = `${tiktok}charlidamelio`
+            var url2 = `${tiktok}addisonre`
+            var url3 = `${tiktok}zachking` 
+            var url4 = `${tiktok}bellapoarch` 
+            var url5 = `${tiktok}spencerx`  
+            var url6 = `${tiktok}lorengray`
+            var url7 = `${tiktok}tiktok`
+            var url8 = `${tiktok}dixiedamelio`
+            var url9 = `${tiktok}willsmith`
+            var url10 = `${tiktok}justmaiko`
+            var url11 = `${tiktok}riyaz.14`
+            var url12 = `${tiktok}jasonderulo`
+            var url13 = `${tiktok}brentrivera`
+            var url14 = `${tiktok}babyariel`
+            var url15 = `${tiktok}kimberly.loaiza`
+            var url16 = `${tiktok}jamescharles`
+            var url17 = `${tiktok}mr_faisu_07`
+            var url18 = `${tiktok}cznburak`
+            var url19 = `${tiktok}gilmhercroes`
+            var url20 = `${tiktok}itsjojosiwa`     
+            
+            $.getJSON(url1, function(data1) {count1.innerHTML = data1.followerCount});
+            $.getJSON(url2, function(data2) {count2.innerHTML = data2.followerCount});
+            $.getJSON(url3, function(data3) {count3.innerHTML = data3.followerCount});  
+            $.getJSON(url4, function(data4) {count4.innerHTML = data4.followerCount}); 
+            $.getJSON(url5, function(data5) {count5.innerHTML = data5.followerCount});    
+            $.getJSON(url6, function(data6) {count6.innerHTML = data6.followerCount});
+            $.getJSON(url7, function(data7) {count7.innerHTML = data7.followerCount});
+            $.getJSON(url8, function(data8) {count8.innerHTML = data8.followerCount});
+            $.getJSON(url9, function(data9) {count9.innerHTML = data9.followerCount});
+            $.getJSON(url10, function(data10) {count10.innerHTML = data10.followerCount});
+            $.getJSON(url11, function(data11) {count11.innerHTML = data11.followerCount});
+            $.getJSON(url12, function(data12) {count12.innerHTML = data12.followerCount});
+            $.getJSON(url13, function(data13) {count13.innerHTML = data13.followerCount});
+            $.getJSON(url14, function(data14) {count14.innerHTML = data14.followerCount});
+            $.getJSON(url15, function(data15) {count15.innerHTML = data15.followerCount});
+            $.getJSON(url16, function(data16) {count16.innerHTML = data16.followerCount});
+            $.getJSON(url17, function(data17) {count17.innerHTML = data17.followerCount});
+            $.getJSON(url18, function(data18) {count18.innerHTML = data18.followerCount});
+            $.getJSON(url19, function(data19) {count19.innerHTML = data19.followerCount});
+            $.getJSON(url20, function(data20) {count20.innerHTML = data20.followerCount});
+    }, 3000);
+    
+    
+     
+        
+        
+</script>

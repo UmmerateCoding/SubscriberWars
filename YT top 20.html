@@ -1,0 +1,250 @@
+<head>
+    <link rel="stylesheet" href="odometer-theme-minimal.css">
+    <script src="odometer.js"></script>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+</body>
+
+<style>
+    * {color: white; font-family: Lato;}
+    body {background-color: black;}
+    #you1 {position: absolute; top: 22.5; left: 5; font-size: 30px;}
+    #you2 {position: absolute; top: 97.5; left: 5; font-size: 30px;}
+    #you3 {position: absolute; top: 172.5; left: 5; font-size: 30px;}
+    #you4 {position: absolute; top: 247.5; left: 5; font-size: 30px;}
+    #you5 {position: absolute; top: 322.5; left: 5; font-size: 30px;}
+    #you6 {position: absolute; top: 397.5; left: 5; font-size: 30px;}
+    #you7 {position: absolute; top: 472.5; left: 5; font-size: 30px;}
+    #you8 {position: absolute; top: 547.5; left: 5; font-size: 30px;}
+    #you9 {position: absolute; top: 622.5; left: 5; font-size: 30px;}
+    #you10 {position: absolute; top: 697.5; left: 5; font-size: 30px;}
+    #you11 {position: absolute; top: 22.5; left: 350; font-size: 30px;}
+    #you12 {position: absolute; top: 97.5; left: 350; font-size: 30px;}
+    #you13 {position: absolute; top: 172.5; left: 350; font-size: 30px;}
+    #you14 {position: absolute; top: 247.5; left: 350; font-size: 30px;}
+    #you15 {position: absolute; top: 322.5; left: 350; font-size: 30px;}
+    #you16 {position: absolute; top: 397.5; left: 350; font-size: 30px;}
+    #you17 {position: absolute; top: 472.5; left: 350; font-size: 30px;}
+    #you18 {position: absolute; top: 547.5; left: 350; font-size: 30px;}
+    #you19 {position: absolute; top: 622.5; left: 350; font-size: 30px;}
+    #you20 {position: absolute; top: 697.5; left: 350; font-size: 30px;}
+    #image1 {position: absolute; top: 5; left: 40; object-fit: cover;} 
+    #image2 {position: absolute; top: 80; left: 40; object-fit: cover;}
+    #image3 {position: absolute; top: 155; left: 40; object-fit: cover;}
+    #image4 {position: absolute; top: 230; left: 40; object-fit: cover;}
+    #image5 {position: absolute; top: 305; left: 40; object-fit: cover;}
+    #image6 {position: absolute; top: 380; left: 40; object-fit: cover;}
+    #image7 {position: absolute; top: 455; left: 40; object-fit: cover;}
+    #image8 {position: absolute; top: 530; left: 40; object-fit: cover;}
+    #image9 {position: absolute; top: 605; left: 40; object-fit: cover;}
+    #image10 {position: absolute; top: 680; left: 40; object-fit: cover;}
+    #image11 {position: absolute; top: 5; left: 390; object-fit: cover;}
+    #image12 {position: absolute; top: 80; left: 390; object-fit: cover;}
+    #image13 {position: absolute; top: 155; left: 390; object-fit: cover;}
+    #image14 {position: absolute; top: 230; left: 390; object-fit: cover;}
+    #image15 {position: absolute; top: 305; left: 390; object-fit: cover;}
+    #image16 {position: absolute; top: 380; left: 390; object-fit: cover;}
+    #image17 {position: absolute; top: 455; left: 390; object-fit: cover;}
+    #image18 {position: absolute; top: 530; left: 390; object-fit: cover;}
+    #image19 {position: absolute; top: 605; left: 390; object-fit: cover;}
+    #image20 {position: absolute; top: 680; left: 390; object-fit: cover;}
+    #name1 {position: absolute;top: 5; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;} 
+    #name2 {position: absolute;top: 80; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name3 {position: absolute;top: 155; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name4 {position: absolute;top: 230; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name5 {position: absolute;top: 305; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name6 {position: absolute;top: 380; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name7 {position: absolute;top: 455; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name8 {position: absolute;top: 530; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name9 {position: absolute;top: 605; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name10 {position: absolute;top: 680; left: 120; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name11 {position: absolute;top: 5; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name12 {position: absolute;top: 80; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name13 {position: absolute;top: 155; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name14 {position: absolute;top: 230; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name15 {position: absolute;top: 305; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name16 {position: absolute;top: 380; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name17 {position: absolute;top: 455; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name18 {position: absolute;top: 530; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name19 {position: absolute;top: 605; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #name20 {position: absolute;top: 680; left: 470; font-size: 20px; width: 245px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+    #count1 {position: absolute; top: 30; left: 120; font-size: 35px;}
+    #count2 {position: absolute; top: 105; left: 120; font-size: 35px;}
+    #count3 {position: absolute; top: 180; left: 120; font-size: 35px;}
+    #count4 {position: absolute; top: 255; left: 120; font-size: 35px;}
+    #count5 {position: absolute; top: 330; left: 120; font-size: 35px;}
+    #count6 {position: absolute; top: 405; left: 120; font-size: 35px;}
+    #count7 {position: absolute; top: 480; left: 120; font-size: 35px;}
+    #count8 {position: absolute; top: 555; left: 120; font-size: 35px;}
+    #count9 {position: absolute; top: 630; left: 120; font-size: 35px;}
+    #count10 {position: absolute; top: 705; left: 120; font-size: 35px;}
+    #count11 {position: absolute; top: 30; left: 470; font-size: 35px;}
+    #count12 {position: absolute; top: 105; left: 470; font-size: 35px;}
+    #count13 {position: absolute; top: 180; left: 470; font-size: 35px;}
+    #count14 {position: absolute; top: 255; left: 470; font-size: 35px;}
+    #count15 {position: absolute; top: 330; left: 470; font-size: 35px;}
+    #count16 {position: absolute; top: 405; left: 470; font-size: 35px;}
+    #count17 {position: absolute; top: 480; left: 470; font-size: 35px;}
+    #count18 {position: absolute; top: 555; left: 470; font-size: 35px;}
+    #count19 {position: absolute; top: 630; left: 470; font-size: 35px;}
+    #count20 {position: absolute; top: 705; left: 470; font-size: 35px;}
+    
+</style>
+<!--1-->
+<span id="you1">01</span>
+<img id="image1" src="https://yt3.ggpht.com/ytc/AAUvwniNTDIUibNIZwwUWC820n6i3yPz-rnBDwOpZED1CQY=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name1">T-Series</span>
+<span id="count1" class="odometer odometer-auto-theme"></span>
+<!--2-->
+<span id="you2">02</span>
+<img id="image2" src="https://yt3.ggpht.com/ytc/AAUvwnicjOV8f1wuuYluOYqL4SEYE3PbxaVYK6_ODp5a6g=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name2">PewDiePie</span>
+<span id="count2" class="odometer odometer-auto-theme"></span>
+<!--3-->
+<span id="you3">03</span>
+<img id="image3" src="https://yt3.ggpht.com/ytc/AAUvwnjgVKSu2_AvG1T_oktGcFal5guVC-gTTqHjwt4CnQ=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name3">Cocomelon - Nur...</span>
+<span id="count3" class="odometer odometer-auto-theme"></span>
+<!--4-->
+<span id="you4">04</span>
+<img id="image4" src="https://yt3.ggpht.com/ytc/AAUvwngDsrFkY4RODV4Y3aoYXiUQQoN7dx9AH8tLg32DJw=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name4">SET India</span>
+<span id="count4" class="odometer odometer-auto-theme"></span>
+<!--5-->
+<span id="you5">05</span>
+<img id="image5" src="https://yt3.ggpht.com/ytc/AAUvwnig0xc3hm9xWkJfB7RxDs1Hnqrk6gnebe-ArRrOkQ=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name5">✿ Kids Diana Show</span>
+<span id="count5" class="odometer odometer-auto-theme"></span>
+<!--6-->
+<span id="you6">06</span>
+<img id="image6" src="https://yt3.ggpht.com/ytc/AAUvwng2VI-9OA0yq7vqmH98Ug24YdX-uFnereCkqzWMBBg=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name6">WWE</span>
+<span id="count6" class="odometer odometer-auto-theme"></span>
+<!--7-->
+<span id="you7">07</span>
+<img id="image7" src="https://yt3.ggpht.com/ytc/AAUvwnjCsYp7MpIiP3noUVpGe_6BJP9Q8S9g-D3-ocIE5Q=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name7">5-Minute Crafts</span>
+<span id="count7" class="odometer odometer-auto-theme"></span>
+<!--8-->
+<span id="you8">08</span>
+<img id="image8" src="https://yt3.ggpht.com/ytc/AAUvwniayS5WllYgeNjIAPtQ2mvATH8Su5oSs18Qy-VQsg=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name8">Zee Music Compa...</span>
+<span id="count8" class="odometer odometer-auto-theme"></span>
+<!--9-->
+<span id="you9">09</span>
+<img id="image9" src="https://yt3.ggpht.com/ytc/AAUvwnjesRZhuxZKzq7_EPRK8F0SvhYhd8SNQiE7-ZKYEw=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name9">Like Nastya</span>
+<span id="count9" class="odometer odometer-auto-theme"></span>
+<!--10-->
+<span id="you10">10</span>
+<img id="image10" src="https://yt3.ggpht.com/ytc/AAUvwngkQYs-p7QjVCBTfv5Mb71IxMgb_wlh2L6120I0GA=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name10">Canal KondZilla</span>
+<span id="count10" class="odometer odometer-auto-theme"></span>
+<!--11-->
+<span id="you11">11</span>
+<img id="image11" src="https://yt3.ggpht.com/ytc/AAUvwngYftE65_4UAETD1AX2nP-J3gKkEy-urA6EjOSf=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name11">Vlad & Niki</span>
+<span id="count11" class="odometer odometer-auto-theme"></span>
+<!--12-->
+<span id="you12">12</span>
+<img id="image12" src="https://yt3.ggpht.com/ytc/AAUvwnjikPqZQLCLO0Dpiekl_ZkNcSB-1HMCy1Rz_f2UiA=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name12">Justin Bieber</span>
+<span id="count12" class="odometer odometer-auto-theme"></span>
+<!--13-->
+<span id="you13">13</span>
+<img id="image13" src="https://yt3.ggpht.com/ytc/AAUvwnjEDJWYaIksia0vpqmF1_jPxZz4oYeNnPG6zs-IBw=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name13">BLACKPINK</span>
+<span id="count13" class="odometer odometer-auto-theme"></span>
+<!--14-->
+<span id="you14">14</span>
+<img id="image14" src="https://yt3.ggpht.com/ytc/AAUvwngeFDS1A8qxvkMazIktq2dNs7Q6PKynzY-_x6P-kg=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name14">Zee Tv</span>
+<span id="count14" class="odometer odometer-auto-theme"></span>
+<!--15-->
+<span id="you15">15</span>
+<img id="image15" src="https://yt3.ggpht.com/ytc/AAUvwniVZo3lLJrXzKMpuj49VV7w1G3dFbBSpte9q0wQLQ=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name15">Dude Perfect</span>
+<span id="count15" class="odometer odometer-auto-theme"></span>
+<!--16-->
+<span id="you16">16</span>
+<img id="image16" src="https://yt3.ggpht.com/ytc/AAUvwnicz0kO5L4tVnq5A6H93v37yMefPLmJk6AmIg8bUw=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name16">MrBeast</span>
+<span id="count16" class="odometer odometer-auto-theme"></span>
+<!--17-->
+<span id="you17">17</span>
+<img id="image17" src="https://yt3.ggpht.com/ytc/AAUvwnjZsVIxgLup9lFku3uKwv8WfPeUOmiRdjdJNidS4g=s240-c-k-c0x00ffffff-no-rj-mo" height="70" width="70">
+<span id="name17">Marshmello</span>
+<span id="count17" class="odometer odometer-auto-theme"></span>
+<!--18-->
+<span id="you18">18</span>
+<img id="image18" src="https://yt3.ggpht.com/ytc/AAUvwni_GxAz9AH8OLOBjqZEjjJ5PAR6xsPbdT-eHcFt=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name18">Big Hit Labels</span>
+<span id="count18" class="odometer odometer-auto-theme"></span>
+<!--19-->
+<span id="you19">19</span>
+<img id="image19" src="https://yt3.ggpht.com/ytc/AAUvwnhxzMLytJhvm1Hb__0A0-lC6gmTj5iTAz4zovKnHA=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name19">Movieclips</span>
+<span id="count19" class="odometer odometer-auto-theme"></span>
+<!--20-->
+<span id="you20">20</span>
+<img id="image20" src="https://yt3.ggpht.com/ytc/AAUvwngVDypba5Q8j0wf3P9ieOy6sx-GAIk4XtTgGjjESw=s240-c-k-c0x00ffffff-no-rj" height="70" width="70">
+<span id="name20">Goldmines Telefims</span>
+<span id="count20" class="odometer odometer-auto-theme"></span>
+
+
+<script type="text/javascript">
+
+    const youtube='https://livecounts.space/api/youtube/estimated/user/'
+        
+    setInterval(function() {
+            var url1 = `${youtube}UCq-Fj5jknLsUf-MWSy4_brA`
+            var url2 = `${youtube}UC-lHJZR3Gqxm24_Vd_AJ5Yw`
+            var url3 = `${youtube}UCbCmjCuTUZos6Inko4u57UQ` 
+            var url4 = `${youtube}UCpEhnqL0y41EpW2TvWAHD7Q` 
+            var url5 = `${youtube}UCk8GzjMOrta8yxDcKfylJYw`  
+            var url6 = `${youtube}UCJ5v_MCY6GNUBTO8-D3XoAg`
+            var url7 = `${youtube}UC295-Dw_tDNtZXFeAPAW6Aw`
+            var url8 = `${youtube}UCFFbwnve3yF62-tVXkTyHqg`
+            var url9 = `${youtube}UCJplp5SjeGSdVdwsfb9Q7lQ`
+            var url10 = `${youtube}UCffDXn7ycAzwL2LDlbyWOTw`
+            var url11 = `${youtube}UCvlE5gTbOvjiolFlEm-c_Ow`
+            var url12 = `${youtube}UCIwFjwMjI0y7PDBVEO9-bkQ`
+            var url13 = `${youtube}UCOmHUn--16B90oW2L6FRR3A`
+            var url14 = `${youtube}UCppHT7SZKKvar4Oc9J4oljQ`
+            var url15 = `${youtube}UCRijo3ddMTht_IHyNSNXpNQ`
+            var url16 = `${youtube}UCX6OQ3DkcsbYNE6H8uQQuVA`
+            var url17 = `${youtube}UCEdvpU2pFRCVqU6yIPyTpMQ`
+            var url18 = `${youtube}UC3IZKseVpdzPSBaWxBxundA`
+            var url19 = `${youtube}UC3gNmTGu-TTbFPpfSs5kNkg`
+            var url20 = `${youtube}UCyoXW-Dse7fURq30EWl_CUA`     
+            
+            $.getJSON(url1, function(data1) {count1.innerHTML = data1.SubscriberCount});
+            $.getJSON(url2, function(data2) {count2.innerHTML = data2.SubscriberCount});
+            $.getJSON(url3, function(data3) {count3.innerHTML = data3.SubscriberCount});  
+            $.getJSON(url4, function(data4) {count4.innerHTML = data4.SubscriberCount}); 
+            $.getJSON(url5, function(data5) {count5.innerHTML = data5.SubscriberCount});    
+            $.getJSON(url6, function(data6) {count6.innerHTML = data6.SubscriberCount});
+            $.getJSON(url7, function(data7) {count7.innerHTML = data7.SubscriberCount});
+            $.getJSON(url8, function(data8) {count8.innerHTML = data8.SubscriberCount});
+            $.getJSON(url9, function(data9) {count9.innerHTML = data9.SubscriberCount});
+            $.getJSON(url10, function(data10) {count10.innerHTML = data10.SubscriberCount});
+            $.getJSON(url11, function(data11) {count11.innerHTML = data11.SubscriberCount});
+            $.getJSON(url12, function(data12) {count12.innerHTML = data12.SubscriberCount});
+            $.getJSON(url13, function(data13) {count13.innerHTML = data13.SubscriberCount});
+            $.getJSON(url14, function(data14) {count14.innerHTML = data14.SubscriberCount});
+            $.getJSON(url15, function(data15) {count15.innerHTML = data15.SubscriberCount});
+            $.getJSON(url16, function(data16) {count16.innerHTML = data16.SubscriberCount});
+            $.getJSON(url17, function(data17) {count17.innerHTML = data17.SubscriberCount});
+            $.getJSON(url18, function(data18) {count18.innerHTML = data18.SubscriberCount});
+            $.getJSON(url19, function(data19) {count19.innerHTML = data19.SubscriberCount});
+            $.getJSON(url20, function(data20) {count20.innerHTML = data20.SubscriberCount});
+    }, 3000);
+    
+    
+     
+        
+        
+</script>
+    
