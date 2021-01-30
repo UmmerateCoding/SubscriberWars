@@ -1,0 +1,51 @@
+<body>
+    <link rel="stylesheet" href="odometer-theme-minimal.css">
+    <script src="odometer.js"></script>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+<style>
+    *{font-family: Lato !Important; background-color: black; color: white;}
+    
+</style>
+
+
+<span class="odometer odometer-auto-theme" id="count" style="color: white; font-size: 150px; background-color: transparent; position: absolute; top: 10px; left: 10px;">0</span>
+<span class="odometer odometer-auto-theme" id="count1" style="color: white; font-size: 150px; background-color: transparent; position: absolute; top: 10px; left: 1000px;">0</span>
+<span class="odometer odometer-auto-theme" id="count2" style="color: white; font-size: 150px; background-color: transparent; position: absolute; top: 300px; left: 10px;">0</span>
+<span class="odometer odometer-auto-theme" id="gap" style="color: white; font-size: 150px; background-color: transparent; position: absolute; top: 600px; left: 10px;">0</span>
+<span class="odometer odometer-auto-theme" id="gap1" style="color: white; font-size: 150px; background-color: transparent; position: absolute; top: 600px; left: 1000px;">0</span>
+<span class="odometer odometer-auto-theme" id="gap2" style="color: white; font-size: 150px; background-color: transparent; position: absolute; top: 900px; left: 10px;">0</span>
+
+	
+
+
+<script type="text/javascript">
+var gap01=0;
+var gap02=0;
+var gap03=0;
+var url ='https://livecounts.io/api/youtube-live-subscriber-count/stats/UCX6OQ3DkcsbYNE6H8uQQuVA';
+var url1 ='https://mixerno.space/api/youtube/estimated/user/UCX6OQ3DkcsbYNE6H8uQQuVA';
+var url2 ='https://estimates.ncinsiders.live/est/youtube/UCX6OQ3DkcsbYNE6H8uQQuVA'   
+        
+    setInterval(function() {
+    
+        $.getJSON(url, function(data) {
+            count.innerHTML=data.followerCount
+            gap01=parseFloat(data.SubscriberCount)
+            gap.innerHTML=gap01-gap02
+        });
+        $.getJSON(url1, function(data1) {
+            count1.innerHTML=data1.SubscriberCount
+            gap02=parseFloat(data1.SubscriberCount)
+            gap1.innerHTML=gap01-gap03
+
+        });
+        $.getJSON(url2, function(data2) {
+            count2.innerHTML=data2.estimatedCount
+            gap03=parseFloat(data2.estimatedCount)
+            gap2.innerHTML=gap01-gap03
+        })
+        
+    }, 2000);
+
+	</script>
