@@ -10,7 +10,7 @@
 </head>
 <body>
     <center>
-        <img style="border:0px" src="https://yt3.ggpht.com/pVvSYiRAXPcUgTFZ4W1g7csOBb4hqBSxDwFF7fDVAPGkXd9ClHExh_2XtLabyecgahss6o2s=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj">
+        <img style="border:0px" src="https://yt3.ggpht.com/5Ir3sI0Yc6dHbbZp08sbX3UN30oFLCAJRzC7alMJT8aUMJ9cH1coGGHmNJim4eJGHHsiCLD6uA=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj">
         <h1 style="font-size: 10vh; font-weight: 800">Subscriber Wars</h1>
         Update Every 30 Seconds<br>
         <h1 style="color: #ff0000">YouTube</h1>
@@ -18,27 +18,16 @@
         <h1><a href="https://www.youtube.com/channel/UCdKLd9f_8ZyDSKxMm16oRww">Subscriber Wars</a></h1>
         <div class="odometer odometer-auto-theme" id="subcount" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
         <br>
-        <h1><a href="https://www.youtube.com/channel/UCuEOWgNrCFBx9HrVwc09Eng">Subscriber Wars 2</a></h1>
-        <div class="odometer odometer-auto-theme" id="subcount1" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
-        <br>
-        <h1><a href="https://www.youtube.com/channel/UCMCcezu9B4776VzmPhaTThw">Subscriber Wars Gaming</a></h1>
+        <h1><a href="https://www.youtube.com/channel/UCMCcezu9B4776VzmPhaTThw">JayBurton</a></h1>
         <div class="odometer odometer-auto-theme" id="subcount2" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
         <br>
-        <h1><a href="https://www.youtube.com/channel/UCVHpvJNz3kRdxBwqSsRuK2A">Subscriber Wars Exploring</a></h1>
-        <div class="odometer odometer-auto-theme" id="subcount3" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
-
         <h1 style="color:#00ccff">Twitter</h1>
-
         <h1><a href=https://www.twitter.com/JayMBurton>@JayMBurton</a></h1>
         <div class='odometer odometer-auto-theme' id="twitter" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
-
         <h1 style="color:#9933ff">Twitch</h1>
-
         <h1><a href=https://www.twitch.tv/subscriberwars>SubscriberWars</a></h1>
         <div class='odometer odometer-auto-theme' id="twitch" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
-
         <h1 style="color:#ff0080">TikTok</h1>
-
         <h1><a href=https://www.tiktok.com/@subscriberwars>@subscriberwars</a></h1>
         <div class='odometer odometer-auto-theme' id="tiktok" style="color: white; font-size: 10vh; background-color: transparent">TBD</div>
     </center>
@@ -73,25 +62,7 @@
            }, 30000);
        })
 
-    //Subscriber Wars 2 
-       $(document).ready(function() {
-           function loadchannel(name){
-               var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCuEOWgNrCFBx9HrVwc09Eng&key=${youtubeKey}`
-               $.getJSON(url,function(data1){
-                   subcount1.innerHTML=data1["items"][0].statistics.subscriberCount
-               })
-           }
-
-           setInterval(function(){
-               var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCuEOWgNrCFBx9HrVwc09Eng&key=${youtubeKey}`
-               $.getJSON(url,function(data1){
-                   subcount1.innerHTML=data1["items"][0].statistics.subscriberCount
-               })
-               
-           }, 30000);
-       })
-
-    //Subscriber Wars Gaming
+    //Jay Burton
        $(document).ready(function() {
            function loadchannel(name){
                var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCMCcezu9B4776VzmPhaTThw&key=${youtubeKey}`
@@ -109,22 +80,7 @@
            }, 30000);
        })
        
-    //Subscriber Wars Exploring 
-       $(document).ready(function() {
-           function loadchannel(name){
-               var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCVHpvJNz3kRdxBwqSsRuK2A&key=${youtubeKey}`
-               $.getJSON(url,function(data3){
-                   subcount3.innerHTML=data3["items"][0].statistics.subscriberCount
-               })
-           }
 
-           setInterval(function(){
-               var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCVHpvJNz3kRdxBwqSsRuK2A&key=${youtubeKey}`
-               $.getJSON(url,function(data3){
-                   subcount3.innerHTML=data3["items"][0].statistics.subscriberCount
-               })
-               
-           }, 30000);
        })
 
     //Twitter
@@ -142,7 +98,7 @@
                    twitter.innerHTML=data4.followers
                })
                
-           }, 30000);
+           }, 10000);
        })
 
     //Twitch
@@ -160,7 +116,7 @@
                    twitch.innerHTML=data5["channels"][0].followers
                })
                
-           }, 30000);
+           }, 10000);
        })
 
     //TikTok
@@ -178,7 +134,7 @@
                    tiktok.innerHTML=data6.followerCount
                })
                
-           }, 30000);
+           }, 10000);
        })
     </script>
 </body>
