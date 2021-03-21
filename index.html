@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 
-<style>*{font-family:roboto; font-weight:500; background-color:black; color:white}</style>
+<style>
+    *{
+        font-family:roboto; 
+        font-weight:500; 
+        background-color:black; 
+        color:white
+    }
+ 
+ /* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+/* Navigation links */
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Style the current/active link */
+.navbar a.active {
+  background-color: #ff0000;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+}
+</style>
 
 <head>
     <title>Subscriber Wars</title>
@@ -10,9 +55,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <img class='rounded-circle' src="/favicon.ico" size=40 width=40 height=40 />
-    <span><a style= "top:0; left:40" src="/index.html">Subscriber Wars</a></span>
-    <span><a1 style= "top:0; left:40" src="/livecount-sites.html.html">Livecount Sites</a1></span>
+    <div class="navbar">
+  <a class="active" href="/index.html">Home</a>
+  <a href="/livecount-sites.html">Livecount Sites</a>
+  <a href="#">Soon</a>
+</div>
     
     <center>
         <img style="border:0px" src="https://yt3.ggpht.com/5Ir3sI0Yc6dHbbZp08sbX3UN30oFLCAJRzC7alMJT8aUMJ9cH1coGGHmNJim4eJGHHsiCLD6uA=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj">
