@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+ 
+<style>
+
+  * {
+    height: 1px !Important;
+	font-family: roboto;
+  }
+ 
+  body {
+  background-color: black
+  }
+ 
+
+ 
+</style>
+ 
+ 
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://subscriberwars.space/odometer-theme-minimal.css">
+  <script src="https://subscriberwars.space/odometer.js"></script>
+</head>
+ 
+
+  <span class="odometer odometer-auto-theme" id="min1" style="color:white; font-size: 50px; background-color: transparent; position: absolute; top: 0px; left: 10px;">0</span>
+  <span class="odometer odometer-auto-theme" id="day1" style="color:white; font-size: 50px; background-color: transparent; position: absolute; top: 0px; left: 500px;">0</span>
+
+  <span class="odometer odometer-auto-theme" id="min2" style="color:white; font-size: 50px; background-color: transparent; position: absolute; top: 100px; left: 10px;">0</span>
+  <span class="odometer odometer-auto-theme" id="day2" style="color:white; font-size: 50px; background-color: transparent; position: absolute; top: 100px; left: 500px;">0</span>
+  <p>&nbsp;</p>
+
+ 
+ 
+<script type="text/javascript">
+  var avg = 0;
+  var avg1 = 0;
+  var url ='https://livecounts.io/api/youtube-live-subscriber-count/stats/UC-lHJZR3Gqxm24_Vd_AJ5Yw';
+  var url1 ='https://livecounts.io/api/youtube-live-subscriber-count/stats/UCbCmjCuTUZos6Inko4u57UQ'; 
+ 
+ 
+ 
+ 
+ 
+ 
+   $(document).ready(function () {
+ 
+    $.getJSON(url, function (data) {
+      avg.push(Math.floor(data.followerCount));
+      if (avg.length >= 10) { avg.shift() }
+      var count = 0;
+      for (var i = 0; i < avg.length; i++) {
+        console.log(i)
+        if (i == 0) {
+          count = count + (avg[i] - parseFloat(avg[i]))
+        } else {
+          count = count + (parseFloat(avg[i]) - parseFloat(avg[i - 1]))
+        }
+      }
+      var deta = count / avg.length
+      min1.innerHTML = Math.round(deta)
+    });
+ 
+ 
+    var avg = [];
+ 
+    setInterval(function () {
+ 
+      $.getJSON(url, function (data) {
+ 
+ 
+ 
+        avg.push(Math.floor(data.followerCount))
+        if (avg.length >= 10) { avg.shift() }
+        var count = 0;
+        for (var i = 0; i < avg.length; i++) {
+         console.log(i)
+          if (i == 0) {
+            count = count + (avg[i] - parseFloat(avg[i]))
+          } else {
+            count = count + (parseFloat(avg[i]) - parseFloat(avg[i - 1]))
+          }
+        }
+        var deta = count / avg.length
+        var lol = Math.trunc(deta * 6)
+		
+        var lol5 = Math.trunc(deta * 8640)
+ 
+        var ActualMinuteValue = numeral(lol).format('0,0');
+        
+        var ActualMinuteValue5 = numeral(lol5).format('0,0');
+ 
+        min1.innerHTML = ActualMinuteValue
+        
+        day1.innerHTML = ActualMinuteValue5
+
+ 
+    });
+ 
+    }, 10000);
+   var avg1 = [];
+    setInterval(function (data1) {
+        $.getJSON(url1, function (data1) {
+      avg1.push(Math.floor(data1.followerCount));
+      if (avg1.length >= 10) { avg1.shift() }
+      var count1 = 0;
+      for (var i1 = 0; i1 < avg1.length; i1++) {
+        console.log(i1)
+        if (i1 == 0) {
+          count1 = count1 + (avg1[i1] - parseFloat(avg1[i1]))
+        } else {
+          count1 = count1 + (parseFloat(avg1[i1]) - parseFloat(avg1[i1 - 1]))
+        }
+      }
+      var deta1 = count1 / avg1.length
+ 
+        var lol11 = Math.trunc(deta1 * 6)
+        
+        var lol15 = Math.trunc(deta1 * 8640)
+ 
+        var ActualMinuteValue11 = numeral(lol11).format('0,0');
+        
+        var ActualMinuteValue15 = numeral(lol15).format('0,0');
+ 
+        min2.innerHTML = ActualMinuteValue11
+        
+        day2.innerHTML = ActualMinuteValue15
+
+    });
+ 
+    }, 10000);
+  });
+ 
+</script>
+</html>
