@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="fa-events-icons-ready">
+    <head>
+        <title>Subscriber Wars</title>
+        <meta name="description" content="Welcome To the official Site of Subscriber Wars">
+        <meta name="keywords" content="Subscriber Wars, sub wars, youtube battle, youtube, subscribers, subs, youtube subscribers, youtube subs">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="index_styles.css">
+        <script src="odometer.js"></script>
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" href="odometer-theme-minimal.css">
+    </head>
+
+    <body style="background: #2b2b2b;">
+        <div style="clear:both;"></div>
+        <br>
+        <div id="top-header">
+            <div id="top-header-background">
+            </div>
+            <div id="top-info-wrap">
+                <img id="avatar" src="https://yt3.ggpht.com/ytc/AAUvwnjGDNB04C4UH9NjGnEuzqHuWiERsSwbFDNNlJhXkw=s200-c-k-c0x00ffffff-no-rj" alt="Subscriber Wars" title="Subscriber Wars">
+            </div>
+        </div>
+        <div id="user-menu">
+            <a href="/stats" target="_blank">Stats</a>
+            <a href="https://www.youtube.com/channel/UCdKLd9f_8ZyDSKxMm16oRww" target="_blank">YouTube SW</a>
+            <a href="https://www.youtube.com/channel/UCMCcezu9B4776VzmPhaTThw" target="_blank">YouTube JB</a>
+            <a href="https://www.twitter.com/JayMBurton" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/jayburton135" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com/@subscriberwars" target="_blank">TikTok</a>
+            <a href="https://www.twitch.tv/subscriberwars" target="_blank">Twitch</a>
+        </div>
+        
+        <div style="width: 1260px; margin: 0px auto;">
+            <div id="container">
+                <div id="panel-left">
+                    <div style="float: left; width: 560px;">
+
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Subscriber Wars</div>
+                        <div id="sw" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Twitter</div>
+                        <div id="twitter" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">TikTok</div>
+                        <div id="tiktok" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+                    </div>
+                </div>
+
+                <div id="panel-right">
+                    <div style="float: left; width: 560px;">
+
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;"> Jay Burton</div>
+                        <div id="jb" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Twitch</div>
+                        <div id="twitch" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Instagram</div>
+                        <div id="instagram" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">Nope :(</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script type="text/javascript">
+    
+    const youtubeKey ='AIzaSyAFyXqPvngns5qXpTIvbWwlg3othUc8KME';
+
+        var url ='https://afternoon-depths-19371.herokuapp.com/subscribers';
+    
+        setInterval(function() {
+        
+        $.getJSON(url, function(data) {
+            sw.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
+        });
+    }, 10000);
+
+    setInterval(function(){
+               var url=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCMCcezu9B4776VzmPhaTThw&key=${youtubeKey}`
+               $.getJSON(url,function(data){
+                   jb.innerHTML=data["items"][0].statistics.subscriberCount
+               })
+               
+           }, 10000);
+
+    setInterval(function(){
+               var url=`https://mixerno.space/api/twitter/user/JayMBurton`
+               $.getJSON(url,function(data4){
+                   twitter.innerHTML=data4.followers
+               })
+               
+           }, 10000);
+
+    setInterval(function(){
+               var url=`https://mixerno.space/api/twitch/user/445479678`
+               $.getJSON(url,function(data5){
+                   twitch.innerHTML=data5["channels"][0].followers
+               })
+               
+           }, 10000);
+
+    setInterval(function(){
+               var url=`https://api.nextcounts.com/api/tiktok/user/stats/subscriberwars`
+               $.getJSON(url,function(data6){
+                   tiktok.innerHTML=data6.followers
+               })
+               
+           }, 10000);
+
+    
+    </script>
