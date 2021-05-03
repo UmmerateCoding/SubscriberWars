@@ -1,0 +1,126 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+    color: #232323;
+    font-size: 11pt;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+}
+div {
+    display: block;
+}
+#top-header {
+    height:210px;
+    width: 1260px;
+    margin: 0px auto;
+    background: #e6e6e6;
+    overflow: hidden;
+    position: relative;
+}
+#top-header-background {
+    background-image: url('https://yt3.ggpht.com/E1DfRGfhnE_VkaB9cVvsJpyTl5ed2QkVi_o177hrUhNZ45ERWKviUDObRsRFNXe2MZcxraO14w=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');
+    background-size: 100%;
+    height: 210px;
+    width: 1280px;
+}
+#top-info-wrap {
+    width: 1260px;
+    margin: 0px auto;
+    background: #fff;
+    height: 90px;
+    position: relative;
+}
+#avatar {
+    background: #fff;
+    float: left;
+    height: 170px;
+    width: 170px;
+    border-radius: 85px;
+    border: 5px solid #fff;
+    margin-top: -195px;
+    margin-left: 20px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(51,3,0,0.2);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(51,3,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(51,3,0,0.2);
+}
+#user-menu {
+    width: 1260px;
+    margin: 0px auto;
+    background: #000;
+    line-height: 50px;
+    height: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+#user-menu a {
+    display: block;
+    float: left;
+    height: 50px;
+    padding: 0px 15px;
+    color: #fff;
+    text-decoration: none; 
+}
+#user-menu a:hover {
+    background: rgb(20, 20, 20);
+}
+#container {
+    width: 1260px;
+    margin: 20px auto;
+}
+#sidebar {
+    width: 340px;
+    float: right;
+}
+.video-embed {
+    width: 340px;
+    height: 191px;
+    background: rgb(20, 20, 20);
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+#user-content {
+    width: 900px;
+    float: left;
+}
+#lower-header {
+    width: 860px;
+    height: 30px;
+    line-height: 30px;
+    background: rgb(20, 20, 20);
+    padding: 0px 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10pt;
+}
+.chart-even {
+    width: 860px;
+    height: 32px;
+    line-height: 32px;
+    background: #302f2f;
+    padding: 0px 20px;
+    color: #fcfcfc;
+    font-size: 9pt;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+.chart-odd {
+    width: 860px;
+    height: 32px;
+    line-height: 32px;
+    background: #242424;
+    padding: 0px 20px;
+    color: #fcfcfc;
+    font-size: 9pt;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+.chart-day {
+    float: left;
+    width: 20px;
+    color: #9a9a9a;
+    text-align: right;
+    padding-right: 44px;
+}
+.twitter-tweet {
+    width: 340px;
+
+}
