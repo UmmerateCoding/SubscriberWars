@@ -58,8 +58,8 @@
                         <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Twitch</div>
                         <div id="twitch" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
 
-                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Instagram</div>
-                        <div id="instagram" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">Nope :(</div>
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Utreon</div>
+                        <div id="utreon" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
                     </div>
                 </div>
             </div>
@@ -108,6 +108,13 @@
                var url=`https://api.nextcounts.com/api/tiktok/user/stats/subscriberwars`
                $.getJSON(url,function(data6){
                    tiktok.innerHTML=data6.followers
+               })
+               
+           }, 10000);
+     setInterval(function(){
+               var url=`https://api.nextcounts.com/api/utreon/channel/SCw-b6fZX20-sWuu6n40wc`
+               $.getJSON(url,function(data6){
+                   utreon.innerHTML=data6.followers
                })
                
            }, 10000);
