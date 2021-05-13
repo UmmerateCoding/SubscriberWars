@@ -1,0 +1,185 @@
+<head>
+<title>Averages</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/darkly/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+</head>
+
+<style>
+    *{
+        font-family: roboto;
+        font-weight: 500;
+    }
+</style>
+
+<body>
+    <div class="table-responsive" style="border-style: none;">
+      <table class="table table-stripped table-dark table-sm">
+          <thread>
+              <tr>
+                  <th style="border-style: solid; border-right-style: solid;"></th>
+                  <th style="border-bottom-style: solid;">1s Avg</th>
+                  <th style="border-bottom-style: solid;">1min Avg</th>
+                  <th style="border-bottom-style: solid;">1hr Avg</th>
+                  <th style="border-bottom-style: solid;">12hr Avg</th>
+                  <th style="border-bottom-style: solid;">1day Avg</th>
+                  <th style="border-bottom-style: solid; border-right-style:solid">7day Avg</th>
+              </tr>
+          </thread>
+          <tbody style="border-style: none;">
+            <tr>
+                <td style="border-right-style: solid; border-left-style: solid;">
+                    <strong>PewDiePie</strong>
+                </td>
+                <td id="11s">0</td>
+                <td id="11min">0</td>
+                <td id="11hr">0</td>
+                <td id="112hr">0</td>
+                <td id="11d">0</td>
+                <td id="17d" style="border-right-style:solid">0</td>
+            </tr>
+            <tr>
+                <td style="border-right-style: solid; border-left-style: solid;">
+                    <strong>SET India</strong>
+                </td>
+                <td id="21s">0</td>
+                <td id="21min">0</td>
+                <td id="21hr">0</td>
+                <td id="212hr">0</td>
+                <td id="21d">0</td>
+                <td id="27d" style="border-right-style:solid">0</td>
+            </tr>
+            <tr>
+                <td style="border-right-style: solid; border-left-style: solid; border-bottom-style: solid;">
+                    <strong>Takeover</strong>
+                </td>
+                <td id="takeover" colspan="6" style="border-bottom-style: solid; border-right-style: solid;">0</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+</body>
+
+<script>
+
+      const url = 'https://mixerno.space/api/yt/estsys/UC-lHJZR3Gqxm24_Vd_AJ5Yw';
+      const url1 = 'https://mixerno.space/api/yt/estsys/UCpEhnqL0y41EpW2TvWAHD7Q';
+
+      var prevCount = [];
+    	var firstLive = [false, false];
+
+
+    	var rates = {
+    		counts: [[],[]],
+    		vals: [0, 0],
+    		divisor: [0, 0],
+    		add: function (i, a) {
+    			a = Number(a);
+    			rates.vals[i] *= rates.counts[i].length;
+    			rates.counts[i].push(a);
+    			var sub = rates.counts[i].length > 60 ? rates.counts[i].shift() : 0;
+    			rates.vals[i] += (a - sub);
+    			rates.vals[i] = (rates.vals[i] / rates.counts[i].length).toFixed(60);
+    		}
+    	};
+
+      function getTime(t) {
+      var str = ['', '', '', '', '', ' seconds'];
+      var s = t, m = '', h = '', d= '', m= '', y='';
+      //minutes
+      if (t >= 6) {
+        str[4] = ' minutes ';
+        m = parseInt(t / 60);
+        s -= m * 60;
+      }
+      //hours
+      if (t >= 360) {
+        str[3] = ' hours ';
+        h = parseInt(t / 3600);
+        m -= h * 60;
+      }
+      //days
+      if (t >= 8640) {
+        str[2] = ' days ';
+        d = parseInt(t / 86400);
+        h -= d * 24;
+      }
+      return d + str[2] + h + str[3] + m + str[4] + s + str[5];
+    }
+
+      setInterval(function () {
+        $.getJSON(url, function (data) {
+
+          $.getJSON(url1, function (data1) {
+
+      if(!firstLive[0] || !firstLive[1]) {
+        prevCount[0] = data.SubscriberCount;
+        firstLive[0] = true;
+        prevCount[1] = data1.SubscriberCount;
+        firstLive[1] = true;
+      } else {
+        rates.add(0, data.SubscriberCount - prevCount[0]);
+        rates.add(1, data1.SubscriberCount - prevCount[1]);
+        prevCount[0] = data.SubscriberCount;
+        prevCount[1] = data1.SubscriberCount;
+
+        var avgRate1 = rates.vals[0];
+        var avgRate2 = rates.vals[1];
+
+        var final11 = Math.trunc(avgRate1);
+        var final12 = numeral(avgRate1 * 6).format('0,0');
+        var final13 = numeral(avgRate1 * 360).format('0,0');
+        var final14 = numeral(avgRate1 * 4320).format('0,0');
+        var final15 = numeral(avgRate1 * 8640).format('0,0');
+        var final16 = numeral(avgRate1 * 60480).format('0,0');
+
+        var final21 = Math.trunc(avgRate2);
+        var final22 = numeral(avgRate2 * 6).format('0,0');
+        var final23 = numeral(avgRate2 * 360).format('0,0');
+        var final24 = numeral(avgRate2 * 4320).format('0,0');
+        var final25 = numeral(avgRate2 * 8640).format('0,0');
+        var final26 = numeral(avgRate2 * 60480).format('0,0');
+
+        updateAvg1(final11, final12, final13, final14, final15, final16);
+        updateAvg2(final21, final22, final23, final24, final25, final26);
+      }
+
+
+      if ((data.SubscriberCount && !isNaN(data1.SubscriberCount)) || (data1.SubscriberCount && !isNaN(data.SubscriberCount))) {
+
+      var more = data.SubscriberCount > data1.SubscriberCount ? 0 : 1, less = 1 - more;
+
+
+      var gap = Math.floor(data.SubscriberCount - data1.SubscriberCount);
+      var secsLeft = parseInt(gap / (rates.vals[less] - rates.vals[more]));
+      updateTakeover(secsLeft*10);
+      }
+
+          });
+          });
+      }, 10000);
+
+
+    function updateAvg1(val1, val2, val3, val4, val5, val6) {
+        $('#11s').html(val1);
+        $('#11min').html(val2);
+        $('#11hr').html(val3);
+        $('#112hr').html(val4);
+        $('#11d').html(val5);
+        $('#17d').html(val6);
+    }
+
+    function updateAvg2(val1, val2, val3, val4, val5, val6) {
+        $('#21s').html(val1);
+        $('#21min').html(val2);
+        $('#21hr').html(val3);
+        $('#212hr').html(val4);
+        $('#21d').html(val5);
+        $('#27d').html(val6);
+    }
+
+    function updateTakeover(val) {
+        $('#takeover').html(val >= 0 ? getTime(val) : 'Never');
+    }
+    </script>
