@@ -68,7 +68,7 @@
     
     const youtubeKey ='AIzaSyAFyXqPvngns5qXpTIvbWwlg3othUc8KME';
 
-    var url1=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCdKLd9f_8ZyDSKxMm16oRww&key=${youtubeKey}`;
+    var url1=`https://subscriber-count.subscriberwars.repl.co/subscribers`;
     var url2=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCMCcezu9B4776VzmPhaTThw&key=${youtubeKey}`;
     var url3=`https://mixerno.space/api/twitter/user/JayMBurton`;
     var url4=`https://mixerno.space/api/twitch/user/445479678`;
@@ -76,7 +76,7 @@
     
     setInterval(function() {
         $.getJSON(url1, function(data) {
-            sw.innerHTML=data["items"][0].statistics.subscriberCount
+            sw.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
         });
         $.getJSON(url2,function(data){
             jb.innerHTML=data["items"][0].statistics.subscriberCount
