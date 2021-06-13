@@ -64,20 +64,39 @@
 
     <script type="text/javascript">
     
-    const youtubeKey ='AIzaSyAFyXqPvngns5qXpTIvbWwlg3othUc8KME';
+    const youtubeKey ='';
 
     var url1=`https://api.subscriberwars.space/yt/subscriberwars`;
-    var url2=`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCMCcezu9B4776VzmPhaTThw&key=${youtubeKey}`;
+    var url2=`https://api1.subscriberwars.space/yt/jaymburton`;
     var url3=`https://mixerno.space/api/twitter/user/JayMBurton`;
     var url4=`https://mixerno.space/api/twitch/user/445479678`;
     var url5=`https://api.nextcounts.com/api/tiktok/user/stats/subscriberwars`
+    
+    $(document).ready(function(){
+        $.getJSON(url1, function(data) {
+            sw.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
+        });
+        $.getJSON(url2,function(data){
+            jb.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
+               });
+        $.getJSON(url3,function(data4){
+                   twitter.innerHTML=data4.followers
+               });
+        $.getJSON(url4,function(data5){
+                   twitch.innerHTML=data5["channels"][0].followers
+               });
+        $.getJSON(url5,function(data6){
+                   tiktok.innerHTML=data6.followers
+               });
+    })
+        
     
     setInterval(function() {
         $.getJSON(url1, function(data) {
             sw.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
         });
         $.getJSON(url2,function(data){
-            jb.innerHTML=data["items"][0].statistics.subscriberCount
+            jb.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
                });
         $.getJSON(url3,function(data4){
                    twitter.innerHTML=data4.followers
