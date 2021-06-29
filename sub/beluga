@@ -1,0 +1,1294 @@
+<html>
+
+<head>
+  <title>Mixerno V5 - Watching user Beluga's counter on Youtube Subscriber Counter
+  </title>
+  <script async src="https://arc.io/widget.min.js#jnEJG9ET"></script> 
+  <meta name="keywords" content="youtube, live, subscriber, counter, youtube live, youtube live subscriber, youtube live subscriber counter, youtube subscriber counter, youtube live counter, yt, yt sub counter, sub, sub counter, subs counter, yt subs counter" />
+  
+  <!--start-->
+  <meta property="twitter:image"
+    content="https://api.microlink.io/?url=https://beta.mixerno.space/youtube-subscriber-counter/UCmSp4bDxS9R0jpeZEvkut2g&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url">
+  <meta property="twitter:description"
+    content="Visit Beluga's live subscriber count directly from your browser!">
+  <meta name="description" content="Visit Beluga's live subscriber count directly from your browser!">
+  <meta property="twitter:title" content="Mixerno V5 - Beluga's counter on Youtube Subscriber Counter">
+  <meta property="twitter:url" content="https://beta.mixerno.space/youtube-subscriber-counter/UCmSp4bDxS9R0jpeZEvkut2g">
+  <meta property="twitter:card" content="summary_large_image">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  <meta property="og:image"
+    content="https://api.microlink.io/?url=https://beta.mixerno.space/youtube-subscriber-counter/UCmSp4bDxS9R0jpeZEvkut2g&amp;screenshot=true&amp;meta=false&amp;embed=screenshot.url">
+  <!--end-->
+  <style>
+    
+.searchbox2 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: rgb(32, 32, 32);
+  padding: 10px;
+  border: 1px solid rgb(30, 30, 30);
+  border-radius: 0.25em;
+}
+
+.searchbox2 {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: rgb(32, 32, 32);
+  padding: 10px;
+  border: 1px solid rgb(30, 30, 30);
+  border-radius: 0.25em;
+}
+
+    body {
+      background: rgb(41, 43, 44) !important;
+      font-family: Roboto Regular !important;
+    }
+
+    .btna {
+      display: block !important;
+      width: 115px !important;
+      height: 25px !important;
+      background: #4E9CAF !important;
+      padding: 10px !important;
+      text-align: center !important;
+      border-radius: 5px !important;
+      color: white !important;
+      font-weight: bold !important;
+      line-height: 25px !important;
+    }
+
+    .topbartext {
+      display: grid;
+      vertical-align: middle;
+      height: 30px;
+      width: 100%;
+    }
+
+    .counterlink1 {
+      color: white;
+      transition: 0.3s;
+      text-decoration: none;
+      line-height: 2em;
+    }
+
+    .counterlink1:visited {
+      color: white;
+      text-decoration: none;
+    }
+
+    .counterlink1:hover {
+      font-size: 100%;
+      color: royalblue;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .spam {
+      float: left;
+      width: 100px !important;
+    }
+
+  </style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </meta>
+  <script defer src="https://kit.fontawesome.com/baa00b3a90.js" crossOrigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossOrigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossOrigin="anonymous"></script>
+  <script type="text/javascript" src="/jquery-3.1.1.min.js"></script>
+  <pain>
+    <script defer src="/odometer.js"></script>
+    <link rel="stylesheet" href="/odometer.css" />
+  </pain>
+  <script defer src="https://code.highcharts.com/highcharts.js"></script>
+  <link rel="stylesheet" href="/global.css" />
+  <link rel="stylesheet" href="/tailwind.css" />
+  <script defer src="/toastr.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+    }
+  </script>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+</head>
+
+<body onload="haha()" style="overflow-x: hidden;" class="main">
+  <style id="lestylehere"></style>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>const _0x2b09=['374611EdfATU','parse','goalCount','grapher','pagent','1BeScXR','178541iDqAhm','<%-\x20c\x20%><%-\x20platform\x20%>graph','likeCount','Roboto\x20Regular','#FFFFFF','<%-\x20c\x20%><%-\x20platform\x20%>page','log','data','api\x20error.','videoCount','subscriberCountAPI','customCounterEnabled','name','108729pqkcbS','stats','Graph','title','transparent','2pxJzWl','subscriberCount','datetime','totalviews','9904GrSrtk','innerHTML','avrgs','Beluga1','length','type','commentCount','graph','Mixerno.Space','videos','userList','GIVE\x20IT\x20A\x20BREAK\x20NOW\x20SHALL\x20WE?','7dFXcNG','129567pGeIKd','fontent','dislikeCount','series','json','apicount','getItem','chart','mainodo','64872BDHhyZ','132625AulFOd','addPoint','graphEnabled','royalblue','createnewchart','getElementById','viewCount','goal'];const _0x1360=function(_0x1cb439,_0x372344){_0x1cb439=_0x1cb439-0xda;let _0x2b098f=_0x2b09[_0x1cb439];return _0x2b098f;};const _0x871b1c=_0x1360;(function(_0x1540eb,_0x2c6b88){const _0x5aae43=_0x1360;while(!![]){try{const _0x1df051=parseInt(_0x5aae43(0x102))+-parseInt(_0x5aae43(0x111))+-parseInt(_0x5aae43(0xf8))*-parseInt(_0x5aae43(0xec))+-parseInt(_0x5aae43(0x103))+parseInt(_0x5aae43(0x110))*parseInt(_0x5aae43(0xf9))+-parseInt(_0x5aae43(0xe8))*parseInt(_0x5aae43(0xe3))+parseInt(_0x5aae43(0x10b));if(_0x1df051===_0x2c6b88)break;else _0x1540eb['push'](_0x1540eb['shift']());}catch(_0x55f079){_0x1540eb['push'](_0x1540eb['shift']());}}}(_0x2b09,0x1acba),console['log'](_0x871b1c(0xef)),window[_0x871b1c(0x10e)]=JSON[_0x871b1c(0x10c)](localStorage[_0x871b1c(0xff)](_0x871b1c(0x112))||'{}'),window[_0x871b1c(0x10f)]=JSON[_0x871b1c(0x10c)](localStorage['getItem'](_0x871b1c(0xdb))||'{}'),window[_0x871b1c(0xfa)]=JSON[_0x871b1c(0x10c)](localStorage[_0x871b1c(0xff)]('<%-\x20c\x20%><%-\x20platform\x20%>font')||'{}'),window[_0x871b1c(0x107)]=function(){const _0x5418c2=_0x871b1c,_0x105594=window[_0x5418c2(0x10e)][_0x5418c2(0xf1)]||'line',_0x3c5dae=window[_0x5418c2(0x10e)][_0x5418c2(0xe6)]||_0x5418c2(0xe5),_0x576501=window[_0x5418c2(0xfa)][_0x5418c2(0xe2)]||_0x5418c2(0x114),_0x5a9cf4=window['pagent']['text']||_0x5418c2(0xda),_0x5536bb=window[_0x5418c2(0x10e)]['color']||_0x5418c2(0x106);window[_0x5418c2(0xf3)]=new Highcharts[(_0x5418c2(0x100))](_0x5418c2(0xf3),{'chart':{'backgroundColor':_0x5418c2(0xe7),'renderTo':graph,'type':_0x105594,'zoomType':'xy','animation':![]},'title':{'text':_0x3c5dae,'style':{'color':_0x5a9cf4,'font':_0x576501}},'time':{'useUTC':![]},'xAxis':{'type':_0x5418c2(0xea),'tickPixelInterval':0x64,'labels':{'style':{'color':_0x5a9cf4,'font':_0x576501}},'visible':!![]},'yAxis':{'title':{'text':''},'labels':{'style':{'color':_0x5a9cf4,'font':_0x576501}},'visible':!![]},'credits':{'enabled':![],'text':_0x5418c2(0xf4)},'series':[{'showInLegend':![],'name':'Beluga\x27s\x20graph','marker':{'enabled':![]},'color':_0x5536bb}]});},$(document)['ready'](function(){const _0x38725b=_0x871b1c;console[_0x38725b(0xdc)]('Beluga2');function _0x3f75e6(_0x116abf,_0x50ffdf,_0x13f824,_0xb76fa0,_0x35b7f1,_0x5a2db1,_0x575d2b,_0x4c66d1,_0x9ece8f){const _0xb344df=_0x38725b;let _0x4ae74e=window[_0xb344df(0xe1)]||![];if(_0x4ae74e==!![])window[_0xb344df(0xfe)]=_0x9ece8f;else{document['getElementById'](_0xb344df(0x101))[_0xb344df(0xed)]=_0x116abf,document[_0xb344df(0x108)](_0xb344df(0x10a))[_0xb344df(0xed)]=_0x50ffdf,document[_0xb344df(0x108)](_0xb344df(0xeb))['innerHTML']=_0x13f824,document[_0xb344df(0x108)](_0xb344df(0xf5))[_0xb344df(0xed)]=_0xb76fa0;if(_0x35b7f1==0x0){}else document[_0xb344df(0x108)]('a1')[_0xb344df(0xed)]=_0x35b7f1,document[_0xb344df(0x108)]('a2')[_0xb344df(0xed)]=_0x5a2db1,document[_0xb344df(0x108)]('a3')['innerHTML']=_0x575d2b;if((window[_0xb344df(0x105)]||!![])==!![])window[_0xb344df(0xf3)][_0xb344df(0xfc)][0x0][_0xb344df(0x104)]([_0x4c66d1,parseFloat(_0x116abf)]);else{}window[_0xb344df(0xee)](_0x116abf),window['updtint']=0x2,window[_0xb344df(0xf3)][_0xb344df(0xfc)][0x0][_0xb344df(0xdd)]['length']>=parseFloat(window['grapher']||0xa28)/0x2&&window[_0xb344df(0xf3)][_0xb344df(0xfc)][0x0][_0xb344df(0xdd)][0x0]['remove']();}}let _0x1c3ec4=![];window[_0x38725b(0x107)]();async function _0x18b241(){const _0x501f30=_0x38725b,_0x25ffa5=Date['now']();if(_0x1c3ec4==!![])return console[_0x501f30(0xdc)](_0x501f30(0xf7));_0x1c3ec4=!![];let _0x5ca55d=await fetch('/api/youtube-subscriber-counter/channel/UCmSp4bDxS9R0jpeZEvkut2g'),_0x53b775=await _0x5ca55d[_0x501f30(0xfd)]();_0x1c3ec4=![],_0x53b775[_0x501f30(0xf6)][_0x501f30(0xf0)]>0x0?_0x3f75e6(_0x53b775[_0x501f30(0xf6)][0x0][_0x501f30(0xe4)][_0x501f30(0xe9)],_0x53b775[_0x501f30(0xf6)][0x0][_0x501f30(0xe4)][_0x501f30(0x10d)],_0x53b775[_0x501f30(0xf6)][0x0][_0x501f30(0xe4)][_0x501f30(0x109)],_0x53b775[_0x501f30(0xf6)][0x0][_0x501f30(0xe4)][_0x501f30(0xdf)],_0x53b775[_0x501f30(0xf6)][0x0][_0x501f30(0xe4)][_0x501f30(0x113)]||0x0,_0x53b775[_0x501f30(0xf6)][0x0]['stats'][_0x501f30(0xfb)]||0x0,_0x53b775[_0x501f30(0xf6)][0x0][_0x501f30(0xe4)][_0x501f30(0xf2)]||0x0,_0x25ffa5,_0x53b775[_0x501f30(0xf6)][0x0][_0x501f30(0xe4)][_0x501f30(0xe0)]):console[_0x501f30(0xdc)](_0x501f30(0xde));}setInterval(_0x18b241,0x7d0);}));</script>
+    <div class="topbar"><a href="/" style="width:70px !important"
+        class="spam counterlink1 topbartext grid grid-cols-2 gap-1"><img class="favicon" src="/favicon.ico"><span
+          class="topbartextd">Mixerno.Space</span></a><span
+        style="font-size: 10px;float: right;width: 180px !important;"
+        class="spam counterlink1 topbartextd grid grid-cols-2 gap-1"><a style="font-size: 15px;" class="counterlink"
+          href="/compare">Compare</a><a href="/analytics" style="font-size: 15px;"
+          class="counterlink">Analytics</a></span></div>
+    <br><br><br>
+    <div class="searchbox shadow-md">
+      <img style="background-image: url(https://yt3.ggpht.com/ypVuQjtcJ62TUE_F3OREPVsiV1P0yNHtIztkFnb7qemGzP77Qxmx08qoxGf8j2PsaEBKYqwQNK8=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj)" class="userbanner" />
+      <img style="object-fit: cover;" src="https://yt3.ggpht.com/rPTMAygaSNkMnSRNRscSk8LYA_d_lUSUbVnswtDjYpzz_Xf7WXXvCL4G7eDmgclQqcIJRwwBAw4=s240-c-k-c0x00ffffff-no-rj" class="useravatar" />
+      <div class="username text-2xl">
+        Beluga
+      </div>
+      <i class="text-1xl fab fa-youtube" aria-hidden="true"></i><br>
+      <div id="mainodo" class="odometer text-5xl sm:text-8xl lg:text-9xl">
+        522,814
+      </div>
+      <div class="usertext" class="text-1xl">
+        Subscribers
+      </div>
+    </div><br>
+    <div class='smallers grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3' style=" width: 90%; margin: auto ">
+      <div style="width:100% !important" class="searchbox2 shadow-md">
+        <div id="goal" class="odometer text-2xl sm:text-2xl lg:text-2xl">
+          77,186
+        </div>
+        <div>Goal <i class="fas fa-chevron-up" aria-hidden="true"></i></div>
+      </div>
+      <div style="width:100%"  class="searchbox2 shadow-md">
+        <div id="totalviews" class="odometer text-2xl sm:text-2xl lg:text-2xl">18,028,219</div>
+        <div>Total Views <i class="fas fa-eye"aria-hidden="true"></i></div>
+      </div><div style="width:100%"  class="searchbox2 shadow-md">
+      <div id="videos" class="odometer text-2xl sm:text-2xl lg:text-2xl">12</div>
+      <div>Videos <i class="fas fa-video"aria-hidden="true"></i></div>
+    </div>
+    </div><div style="text-align:center;color:white"> </div>
+    <div class="useravgs">
+      <br>
+    <div class='smallers grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3' style=" width: 90%; margin: auto ">
+      <div style="width:100% !important" class="searchbox2 shadow-md">
+        <div id="avg1sec" class="odometer text-2xl sm:text-2xl lg:text-2xl">
+          0
+        </div>
+        <div>Average Subscribers Per Second</div>
+      </div>
+      <div style="width:100% !important" class="searchbox2 shadow-md">
+        <div id="avg1min" class="odometer text-2xl sm:text-2xl lg:text-2xl">
+          0
+        </div>
+        <div>Average Subscribers Per Minute</div>
+      </div>
+      <div style="width:100% !important" class="searchbox2 shadow-md">
+        <div id="avg1hr" class="odometer text-2xl sm:text-2xl lg:text-2xl">
+          0
+        </div>
+        <div>Average Subscribers Per Hour</div>
+      </div>
+    </div>
+  </div><br>
+    <div class="searchbox shadow-md" id="graph"></div><br><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle" style="display:block; width: 90% !important; height: 100px;" data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-4244439102279946"
+            data-ad-slot="4374066531"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script></center><br>
+    <div class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 searchbox shadow-md'>
+      <a style="padding: 15px" class="btn btn-dark" href="/youtube-subscriber-counter">Change User <i class="fas fa-user"
+          aria-hidden="true"></i></a>
+      <a style="padding: 15px" class="btn btn-dark" href="/compare">Compare <i class="fas fa-user-friends"
+          aria-hidden="true"></i></a>
+      <a style="padding: 15px" class="btn btn-dark" href="/analytics">Analytics <i
+          class="fas fa-chart-line" aria-hidden="true"></i></a>
+      <button style="padding: 15px" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#customize">Customize <i
+          class="fas fa-palette" aria-hidden="true"></i></button>
+    </div>
+    <br>
+    <center id="embedbox" style="padding:10px; background-color:rgb(32, 32, 32);width: 90%;margin: auto;">
+      <p
+        style="width:90%; margin:auto; text-align:center;background-color:rgb(32, 32, 32);color: #f8f9fa;padding: 15px;">
+        Embed (click to copy)</p><input id="embedstuff" onclick="window.embedsavetocopy()" type="text"
+        style="width:90%; margin:auto; text-align:center;background-color:rgb(32, 32, 32);border: solid 1px;color: #f8f9fa;border-color: #f8f9fa;border-radius: .25rem;padding: 15px;"
+        value="https://mixerno.space/embed/youtube-subscriber-counter/UCmSp4bDxS9R0jpeZEvkut2g" readonly>
+    </center><br><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle" style="display:block; width: 90% !important; height: 100px;" data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-4244439102279946"
+            data-ad-slot="4374066531"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script></center><br>
+    <div style="padding: 10px;width:90%; margin: auto; background-color: rgb(32, 32, 32); color:white !important;"
+      id="disqus_thread"></div><br><center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle" style="display:block; width: 90% !important; height: 100px;" data-ad-format="fluid"
+            data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-4244439102279946"
+            data-ad-slot="4374066531"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script></center>
+    <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    
+      * */
+      
+      var disqus_config = function () {
+      this.page.url = `${location.protocol}//${location.host}/youtube-subscriber-counter/UCmSp4bDxS9R0jpeZEvkut2g`;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = `${location.protocol}//${location.host}/youtube-subscriber-counter/UCmSp4bDxS9R0jpeZEvkut2g`; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      
+      (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://mixernospace-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+    <div class="modal fade" id="customize" tabindex="-1" aria-labelledby="customize" aria-hidden="true">
+      <div style="background-color: rgb(30,30,30); color: white;" class="modal-dialog modal-xl">
+        <div class="modal-content" style="background-color: rgb(30,30,30);">
+          <div class="modal-header">
+            <h5 class="modal-title" id="customizeTitle">Customize rewritten</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1">
+
+            <button style="width: 100%;" onclick="window.showTab(0)" class="butng btn btn-primary">Custom
+              Counter</button>
+
+            <button style="width: 100%;" onclick="window.showTab(1)" class="butng btn btn-primary">Odometer</button>
+
+            <button style="width: 100%;" onclick="window.showTab(2)" class="butng btn btn-primary">Custom CSS</button>
+
+            <button style="width: 100%;" onclick="window.showTab(3)" class="butng btn btn-primary">Page</button>
+
+            <button style="width: 100%;" onclick="window.showTab(4)" class="butng btn btn-primary">Font</button>
+
+            <button style="width: 100%;" onclick="window.showTab(5)" class="butng btn btn-primary">Graph</button>
+          </div>
+          <div class="modal-body grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-5">
+            <div class="tab" style="display:inherit;text-align: center;">
+              <div class="text-3xl">Custom Counter</div>
+              <div class="text-1xl">lightweight version of fake counter</div>
+
+              <div class="input-group mb-3">
+                <span style="
+    background-color: transparent;
+    color: white;
+  " class="input-group-text" id="basic-addon1">Subscribers</span>
+                <input style="
+    background-color: transparent;
+    color: white;
+  " type="number" class="form-control" id="subscribers" placeholder="Subscribers" aria-label="Subscribers"
+                  aria-describedby="basic-addon1">
+              </div>
+              <div class="input-group mb-3">
+                <span style="
+  background-color: transparent;
+  color: white;
+  " class="input-group-text" id="basic-addon1">Update Interval</span>
+                <input style="
+  background-color: transparent;
+  color: white;
+  " type="number" class="form-control" id="updateInterval" placeholder="Update Interval (in seconds)"
+                  aria-label="Update Interval" aria-describedby="basic-addon1">
+              </div>
+
+
+              <div class="input-group">
+
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Subrate (per sec)</span>
+                <input style="
+          background-color: transparent;
+          color: white;
+      " type="number" aria-label="Max" id="subrateMax" placeholder="Min" class="form-control">
+                <input style="
+          background-color: transparent;
+          color: white;
+      " type="number" aria-label="Min" id="subrateMin" placeholder="Max" class="form-control">
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="enableApiUpdates">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="enableApiUpdates">Enable Api Updates</label>
+              </div><br>
+
+
+
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="enableCustomCounter">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="enableCustomCounter">Enable Custom Counter</label>
+              </div>
+              <button type="button" class="btn btn-primary"
+                onclick="customcounterSet(enableCustomCounter.checked, subrateMax.value, subrateMin.value, updateInterval.value, subscribers.value, enableApiUpdates.checked)">Set
+                Custom Counter</button>
+            </div>
+            <div class="tab" style="display:none;text-align: center;">
+              <div class="text-3xl">Odometer</div>
+              <div class="text-1xl">This is the moving animated number. You can modify it how you want! :)</div>
+              <label for="odoslc">Odometer Type</label>
+              <select style="margin: auto;" id="odoslc" class="slct dlflg form-select">
+                <option value="default">Default</option>
+                <option value="minimal">Minimal</option>
+              </select><br>
+              <div class="input-group">
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Odometer Speed</span>
+                <input style="
+          background-color: transparent;
+          color: white;
+      " type="number" aria-label="odometerspeed" id="odometerspeed" placeholder="Seconds" class="form-control">
+              </div><br>
+              <div class="input-group">
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Odometer Line Height</span>
+                <input style="
+          background-color: transparent;
+          color: white;
+      " type="text" aria-label="odolh" id="odolh" placeholder="" class="form-control">
+              </div><br>
+              <div class="input-group">
+                <span style="
+        background-color: transparent;
+        color: white;
+    " class="input-group-text">Odometer Up Color</span>
+                <input style="
+        background-color: transparent;
+        color: white;
+    " type="text" class="form-control" id="odometerupcolor" >
+              </div><br>
+              <div class="input-group">
+                <span style="
+      background-color: transparent;
+      color: white;
+  " class="input-group-text">Odometer Down Color</span>
+                <input style="
+      background-color: transparent;
+      color: white;
+  " type="text" class="form-control" id="odometerdowncolor" >
+              </div><br>
+              <button type="button" class="btn btn-primary" onclick="window.setGlobalodo(JSON.stringify({
+                type: odoslc.value,
+                speed: odometerspeed.value,
+                down: odometerdowncolor.value,
+                up: odometerupcolor.value,
+                lineheight: odolh.value
+              }))">Set Global 
+              Odometer Customizations</button> or 
+              <button type="button" class="btn btn-primary" onclick="window.setodo(JSON.stringify({
+                  type: odoslc.value,
+                  speed: odometerspeed.value,
+                  down: odometerdowncolor.value,
+                  up: odometerupcolor.value,
+                  lineheight: odolh.value
+                }))">Set
+                Odometer Customizations</button>
+            </div>
+            <div class="tab" style="display:none;text-align: center;">
+              <div class="text-3xl">Custom CSS</div>
+              <div class="text-1xl">Paste this into your streaming software's browser source to apply these settings
+                you've done!</div>
+              <textarea style="
+          background-color: transparent;
+          color: white;
+      " onclick="window.savetocopy()" class="form-control" id="customcsseh" type="text" placeholder=""
+                aria-label="readonly input example" readonly></textarea><br><br>
+              <div class="text-1xl">Or you can just make your own design with custom css. (may need some inspect element
+                and css knowledge!)</div>
+              <textarea style="
+                  background-color: transparent;
+                  color: white;
+              " class="form-control" id="customcssadd" type="text" placeholder="custom css here..."
+                aria-label="readonly input example"></textarea><br>
+                <button type="button" class="btn btn-primary"
+                onclick="window.setGlobalCSS(customcssadd.value)">Set Global Custom CSS Customizations</button> or 
+              <button type="button" class="btn btn-primary"
+                onclick="document.querySelector('style').innerHTML += customcssadd.value">Set Custom CSS Customizations</button>
+            </div>
+            <div class="tab" style="display: none; text-align: center">
+              <div class="text-3xl">Page</div>
+              <div class="text-1xl">Customize the look of this page!</div>
+              <!--here starts the customization since for some reason i suck at finding stuff. odd-->
+              <div class="input-group">
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Text Color</span>
+                <input style="
+                background-color: transparent;
+                color: white;
+            " type="text" class="form-control" id="textcolor">
+              </div><br>
+              <div class="input-group">
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Background Color</span>
+                <input style="
+                background-color: transparent;
+                color: white;
+            " type="text" class="form-control" id="backgroundcolor">
+              </div><br>
+              <div class="input-group">
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Box Color</span>
+                <input style="
+                background-color: transparent;
+                color: white;
+            " type="text" class="form-control" id="boxcolor">
+              </div><br>
+              <div class="input-group">
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Box Width</span>
+                <input style="
+                background-color: transparent;
+                color: white;
+            " type="text" class="form-control" id="boxwidth">
+              </div><br>
+              <div class="input-group">
+                <span style="
+          background-color: transparent;
+          color: white;
+      " class="input-group-text">Main odometer size</span>
+                <input style="
+                background-color: transparent;
+                color: white;
+            " type="text" class="form-control" id="mainodosize">
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="averages">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="averages">Averages</label>
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="graphEnab">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="graph">Graph</label>
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="banner">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="banner">Banner</label>
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="banner">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="banner">Banner</label>
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="image">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="image">Image</label>
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="uname">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="uname">Name</label>
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="uicon">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="uicon">Icon</label>
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="roundimage">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="roundimage">Roundified Image</label>
+              </div>
+              <br>
+              <button type="button" class="btn btn-primary"
+              onclick="window.setGlobalPage(JSON.stringify({
+                text: textcolor.value,
+                background: backgroundcolor.value,
+                box: boxcolor.value,
+                boxwidth: boxwidth.value,
+                mainodosize: mainodosize.value,
+                averages: averages.checked,
+                graph: graphEnab.checked,
+                banner: banner.checked,
+                image: image.checked,
+                name: uname.checked,
+                icon: uicon.checked,
+                roundimage: roundimage.checked
+              }))">Set Global Page Customizations</button> or 
+              <button type="button" class="btn btn-primary"
+              onclick="window.setPage(JSON.stringify({
+                text: textcolor.value,
+                background: backgroundcolor.value,
+                box: boxcolor.value,
+                boxwidth: boxwidth.value,
+                mainodosize: mainodosize.value,
+                averages: averages.checked,
+                graph: graphEnab.checked,
+                banner: banner.checked,
+                image: image.checked,
+                name: uname.checked,
+                icon: uicon.checked,
+                roundimage: roundimage.checked
+              }))">Set Page Customizations</button>
+            </div>
+            <div class="tab" style="display:none;text-align: center">
+              <div class="text-3xl">Font</div>
+              <div class="text-1xl">Customize the font!</div>
+              CustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizationsCustomizations
+              add options here..
+              <!--here starts the customization since for some reason i suck at finding stuff. odd-->
+            </div>
+            <div class="tab" style="display:none;text-align: center">
+              <div class="text-3xl">Graph</div>
+              <div class="text-1xl">Customize the look of the graph!</div>
+              <!--here starts the customization since for some reason i suck at finding stuff. odd--><br>
+              <div class="input-group">
+                <span style="
+      background-color: transparent;
+      color: white;
+  " class="input-group-text">Type</span>
+                <input style="
+      background-color: transparent;
+      color: white;
+  " type="text" class="form-control" id="gtype">
+              </div><br>
+              <div class="input-group">
+                <span style="
+      background-color: transparent;
+      color: white;
+  " class="input-group-text">Graph Length</span>
+                <input style="
+      background-color: transparent;
+      color: white;
+  " type="text" class="form-control" id="glength" placeholder="How long the graph should last (in seconds)">
+              </div><br>
+              <div class="input-group">
+                <span style="
+      background-color: transparent;
+      color: white;
+  " class="input-group-text">Graph Color</span>
+                <input style="
+      background-color: transparent;
+      color: white;
+  " type="text" class="form-control" id="gcolor">
+              </div><br>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="glines">
+                <label style="text-align: left !important;width: 100%;" class="form-check-label"
+                  for="glines">Graph Lines</label>
+              </div>
+              <br>
+              <button type="button" class="btn btn-primary" onclick="window.setGlobalgraph(JSON.stringify({
+                  type: gtype.value,
+                  glength: glength.value,
+                  color: gcolor.value,
+                  lines: glines.checked
+                }))">Set Global
+                Graph Customizations</button> or 
+              <button type="button" class="btn btn-primary" onclick="window.setgraph(JSON.stringify({
+                  type: gtype.value,
+                  glength: glength.value,
+                  color: gcolor.value,
+                  lines: glines.checked
+                }))">Set
+                Graph Customizations</button>
+            </div>
+          </div>
+          <div class="modal-footer grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-1">
+            <button style="padding: 10px;    width: 100%;" type=" button" class="butng btn btn-secondary"
+              data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll('.tab')
+      window.showTab = (id) => {
+        for (var i = 0; i < tabs.length; i++) {
+          if (i == id) {
+            tabs[i].style.display = ""
+          } else {
+            tabs[i].style.display = "none"
+          }
+        }
+      }
+    </script>
+    <script>
+      window.avgs = [];
+      //yo mixerno here. dont steal this code pls. i've worked on this alot and this has taken many hours of coding. thank you <3.
+      function haha() {
+        console.log("IT SHOULD WORK?")
+        window.avrgs = function (c) {
+          console.log(c);
+          //then we check that is the averages enabled.
+        const pgg = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterpage')||"{}"); //i think there is an more efficient way to do this. oh well.
+        if(pgg.averages == true) {
+          window.avgs.push(parseFloat(c))
+          if(window.avgs.length > (60/window.updtint)) {
+            window.avgs.shift();//remove first element
+          }
+          if((window.avgstype||false) == false) {//average type 1
+            //og avg type
+            let count = 0;
+            for(var i = 1; i < window.avgs.length; i++) {
+              count+=(window.avgs[i]-window.avgs[i-1])
+            }
+            const jaa = count/window.avgs.length;
+            const averagebox = document.querySelectorAll('.useravgs div div.odometer')
+            averagebox[0].innerHTML = jaa/window.updtint //1 sec
+            averagebox[1].innerHTML = Math.floor((jaa/window.updtint)*60) //1 min
+            averagebox[2].innerHTML = Math.floor((jaa/window.updtint)*3600) //1 hour
+            return console.log(jaa, "avg type 1")
+
+          }
+        } else {
+          window.avgs = []
+        }
+        }
+        window.setGlobalCSS = function (val) {
+          localStorage.setItem('CUSTOMCSS', val)
+          document.querySelector('style').innerHTML += val
+        }
+          const ah = localStorage.getItem('CUSTOMCSS')||""
+          document.querySelector('style').innerHTML += ah
+        window.savetocopy = function () {
+          var copyText = document.getElementById("customcsseh");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999)
+          document.execCommand("copy");
+          alert("Copied Custom CSS. Now you can paste that into your custom css in obs/streamlabs obs/xsplit to enjoy these visual changes.");
+        }
+        window.embedsavetocopy = function () {
+          var copyText = document.getElementById("embedstuff");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999)
+          document.execCommand("copy");
+          alert("Copied Embed URL.");
+        }
+        window.setPage = function (body) {
+          /*
+          * just so i can remember these
+          text: textcolor.value,
+                background: backgroundcolor.value,
+                box: boxcolor.value,
+                boxwidth: boxwidth.value,
+                mainodosize: mainodosize.value,
+                averages: averages.checked,
+                graph: graph.checked,
+                banner: banner.checked,
+                image: image.checked,
+                name: name.checked,
+                roundimage: roundimage.checked
+          */
+          const json = JSON.parse(body)
+          console.log(json.text,json.background,json.box,json.boxwidth,json.mainodosize,json.averages,json.graph,json.banner,json.image,json.name,json.icon,json.roundimage)
+          var oa = {}
+          if (!json.text || json.text == "#010101") { } else {
+            lestylehere.innerHTML += "* {color:" + json.text + " !important;}"
+            oa.text = json.text
+            textcolor.value = json.text
+          }
+          if (!json.background || json.background == "#010101") { } else {
+            lestylehere.innerHTML += "body {background-color:" + json.background + " !important;}"
+            oa.background = json.background
+            backgroundcolor.value = json.background
+          }
+          if (!json.box || json.box == "#010101") { } else {
+            lestylehere.innerHTML += ".modal-content, #disqus_thread, #disqus_recommendations, #embedbox, .btn, .searchbox, .searchbox2 {background-color:" + json.box + " !important;}"/*hm*/
+            lestylehere.innerHTML += ".modal-content, #disqus_thread, #disqus_recommendations, #embedbox, .btn, .searchbox, .searchbox2 {border: 1px solid " + json.box + " !important;}"/*hm*/
+            oa.box = json.box
+            boxcolor.value = json.box
+            setTimeout(() => {
+            gengraph()
+            }, 1000);
+          }
+          if (!json.boxwidth || json.boxwidth == "") { } else {
+            lestylehere.innerHTML += ".modal-content, #disqus_thread, #disqus_recommendations, #embedbox, .searchbox,.smallers {width:" + json.boxwidth + " !important;}"/*hm*/
+            oa.boxwidth = json.boxwidth
+            boxwidth.value = json.boxwidth
+          }
+          if (!json.mainodosize || json.mainodosize == "") { } else {
+            lestylehere.innerHTML += "#mainodo {font-size:" + json.mainodosize + " !important;}"/*hm*/
+            oa.mainodosize = json.mainodosize
+            mainodosize.value = json.mainodosize
+          }
+          if (json.averages == undefined) {averages.checked = false} else {
+            oa.averages = json.averages
+            averages.checked = json.averages
+          }
+          if (json.graph == undefined) { graphEnab.checked = true } else {
+            oa.graph = json.graph
+            graphEnab.checked = json.graph
+          }
+          if (json.banner == undefined) { banner.checked = true } else {
+            oa.banner = json.banner
+            banner.checked = json.banner
+          }
+          if (json.image == undefined) { image.checked = true } else {
+            oa.image = json.image
+            image.checked = json.image
+          }
+          if (json.name == undefined) { uname.checked = true } else {
+            oa.name = json.name
+            uname.checked = json.name
+          }
+          if (json.icon == undefined) { uicon.checked = true } else {
+            oa.icon = json.icon
+            uicon.checked = json.icon
+          }
+          if (json.roundimage == undefined) { roundimage.checked = true } else {
+            oa.roundimage = json.roundimage
+            roundimage.checked = json.roundimage
+          }
+          console.log(oa,json)
+          localStorage.setItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterpage', JSON.stringify(oa))
+        }
+        
+        
+        
+        
+        window.setGlobalPage = function (body) {
+          /*
+          * just so i can remember these
+          text: textcolor.value,
+                background: backgroundcolor.value,
+                box: boxcolor.value,
+                boxwidth: boxwidth.value,
+                mainodosize: mainodosize.value,
+                averages: averages.checked,
+                graph: graph.checked,
+                banner: banner.checked,
+                image: image.checked,
+                name: name.checked,
+                roundimage: roundimage.checked
+          */
+          const json = JSON.parse(body)
+          console.log(json.text,json.background,json.box,json.boxwidth,json.mainodosize,json.averages,json.graph,json.banner,json.image,json.name,json.icon,json.roundimage)
+          var oa = {}
+          if (!json.text || json.text == "#010101") { } else {
+            lestylehere.innerHTML += "* {color:" + json.text + " !important;}"
+            oa.text = json.text
+            textcolor.value = json.text
+          }
+          if (!json.background || json.background == "#010101") { } else {
+            lestylehere.innerHTML += "body {background-color:" + json.background + " !important;}"
+            oa.background = json.background
+            backgroundcolor.value = json.background
+          }
+          if (!json.box || json.box == "#010101") { } else {
+            lestylehere.innerHTML += ".modal-content, #disqus_thread, #disqus_recommendations, #embedbox, .btn, .searchbox, .searchbox2 {background-color:" + json.box + " !important;}"/*hm*/
+            lestylehere.innerHTML += ".modal-content, #disqus_thread, #disqus_recommendations, #embedbox, .btn, .searchbox, .searchbox2 {border: 1px solid " + json.box + " !important;}"/*hm*/
+            oa.box = json.box
+            boxcolor.value = json.box
+            setTimeout(() => {
+            gengraph()
+            }, 1000);
+          }
+          if (!json.boxwidth || json.boxwidth == "") { } else {
+            lestylehere.innerHTML += ".modal-content, #disqus_thread, #disqus_recommendations, #embedbox, .searchbox,.smallers {width:" + json.boxwidth + " !important;}"/*hm*/
+            oa.boxwidth = json.boxwidth
+            boxwidth.value = json.boxwidth
+          }
+          if (!json.mainodosize || json.mainodosize == "") { } else {
+            lestylehere.innerHTML += "#mainodo {font-size:" + json.mainodosize + " !important;}"/*hm*/
+            oa.mainodosize = json.mainodosize
+            mainodosize.value = json.mainodosize
+          }
+          if (json.averages == undefined) {averages.checked = false} else {
+            oa.averages = json.averages
+            averages.checked = json.averages
+          }
+          if (json.graph == undefined) { graphEnab.checked = true } else {
+            oa.graph = json.graph
+            graphEnab.checked = json.graph
+          }
+          if (json.banner == undefined) { banner.checked = true } else {
+            oa.banner = json.banner
+            banner.checked = json.banner
+          }
+          if (json.image == undefined) { image.checked = true } else {
+            oa.image = json.image
+            image.checked = json.image
+          }
+          if (json.name == undefined) { uname.checked = true } else {
+            oa.name = json.name
+            uname.checked = json.name
+          }
+          if (json.icon == undefined) { uicon.checked = true } else {
+            oa.icon = json.icon
+            uicon.checked = json.icon
+          }
+          if (json.roundimage == undefined) { roundimage.checked = true } else {
+            oa.roundimage = json.roundimage
+            roundimage.checked = json.roundimage
+          }
+          console.log(oa,json)
+          localStorage.setItem('globalpage', JSON.stringify(oa))
+        }
+        setInterval(() => {
+          customcsseh.value = lestylehere.innerHTML //Lol
+          const one = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterpage')||"{}")
+          const two = JSON.parse(localStorage.getItem('globalpage')||"{}")
+        const pgg = {...two, ...one };
+        if(pgg.roundimage == undefined) {
+            document.querySelector('.useravatar').style.setProperty('border-radius', '50%', 'important')} else {
+          if(pgg.roundimage == true) {
+            document.querySelector('.useravatar').style.setProperty('border-radius', '50%', 'important')
+          }
+          if(pgg.roundimage == false) {
+            document.querySelector('.useravatar').style.setProperty('border-radius', '0%', 'important')
+          }
+        }
+        if(pgg.name == undefined) {
+            document.querySelector('.username').style.display = ""} else {
+          if(pgg.name == true) {
+            document.querySelector('.username').style.display = ""
+          }
+          if(pgg.name == false) {
+            document.querySelector('.username').style.display = "none"
+          }
+        }
+        if(pgg.icon == undefined) {
+            document.querySelector('.searchbox i').style.display = ""
+            document.querySelector('.searchbox br').style.display = ""} else {
+          if(pgg.icon == true) {
+            document.querySelector('.searchbox i').style.display = ""
+            document.querySelector('.searchbox br').style.display = ""
+          }
+          if(pgg.icon == false) {
+            document.querySelector('.searchbox i').style.display = "none"
+            document.querySelector('.searchbox br').style.display = "none"
+          }
+        }
+        if(pgg.image == undefined) {
+            document.querySelector('.useravatar').style.display = ""} else {
+          if(pgg.image == true) {
+            document.querySelector('.useravatar').style.display = ""
+          }
+          if(pgg.image == false) {
+            document.querySelector('.useravatar').style.display = "none"
+          }
+        }
+        if(pgg.banner == undefined) {
+            document.querySelector('.userbanner').style.display = ""
+            document.querySelector('.useravatar').style.setProperty('margin-top', '-80px', 'important')} else {
+          if(pgg.banner == true) {
+            document.querySelector('.userbanner').style.display = ""
+            document.querySelector('.useravatar').style.setProperty('margin-top', '-80px', 'important')
+          }
+          if(pgg.banner == false) {
+            document.querySelector('.userbanner').style.display = "none"
+            document.querySelector('.useravatar').style.setProperty('margin-top', '0px', 'important')
+          }
+        }
+        if(pgg.averages == undefined) {
+            document.querySelector('.useravgs').style.display = "none"} else {
+          if(pgg.averages == true) {
+            document.querySelector('.useravgs').style.display = ""
+          }
+          if(pgg.averages == false) {
+            document.querySelector('.useravgs').style.display = "none"
+          }
+        }
+        if(pgg.graph == undefined) {
+            document.querySelector('#graph').style.display = ""} else {
+          if(pgg.graph == true) {
+            document.querySelector('#graph').style.display = ""
+          }
+          if(pgg.graph == false) {
+            document.querySelector('#graph').style.display = "none"
+          }
+        }
+        }, 1000);
+        function gengraph() {
+          const onex = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-countergraph')||"{}")
+          const twox = JSON.parse(localStorage.getItem('globalgraph')||"{}")
+          const one = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterpage')||"{}")
+          const two = JSON.parse(localStorage.getItem('globalpage')||"{}")
+        const pgg = {...two, ...one };
+        const json = {...twox, ...onex };
+          console.log(pgg, json, "pgg, json")
+          window.grapher = parseFloat(json.glength)||2600
+
+          window.graph = new Highcharts.chart('graph', {
+            chart: {
+              backgroundColor: 'transparent',
+              renderTo: graph,
+              type: json.type||"line",
+              zoomType: 'xy',
+              animation: false
+            },
+            title: {
+              text: json.title||'Graph',
+              style: {
+                color: pgg.text||'#FFFFFF',
+                font: 'Roboto Regular'
+              }
+            },
+            xAxis: {
+              type: 'datetime',
+              tickPixelInterval: 100,
+              labels: {
+                style: {
+                  color: pgg.text||'#FFFFFF',
+                  font: 'Roboto Regular'
+                }
+              },
+              visible: true
+            },
+            time: {
+              useUTC: false
+          },
+            yAxis: {
+              title: {
+                text: ''
+              },
+              labels: {
+                style: {
+                  color: pgg.text||'#FFFFFF',
+                  font: 'Roboto Regular'
+                }
+              },
+              visible: true
+            },
+
+            credits: {
+              enabled: false,
+              text: "Mixerno.Space"
+            },
+
+            series: [{
+              showInLegend: false,
+              name: "",
+              marker: {
+                enabled: false
+              },
+              color: json.color||"royalblue"
+
+            }]
+          })
+          if(json.lines != undefined) {
+          window.graph.yAxis[0].update({
+                        visible: json.lines
+                    });
+                    window.graph.xAxis[0].update({
+                        visible: json.lines
+                    });
+          } else {
+            
+          window.graph.yAxis[0].update({
+                        visible: true
+                    });
+                    window.graph.xAxis[0].update({
+                        visible: true
+                    });
+          }
+        }
+
+
+        window.setodo = function (body) {
+          const json = JSON.parse(body)
+          console.log(json.down, json.up, json.speed, json.type)
+
+          var oa = {}
+          if (!json.down || json.down == "#010101") { } else {
+            lestylehere.innerHTML += ".odometer-animating-down {color:" + json.down + " !important;}"
+            oa.down = json.down
+            odometerdowncolor.value = json.down
+          }
+          if (!json.up || json.up == "#010101") { } else {
+            lestylehere.innerHTML += ".odometer-animating-up {color:" + json.up + " !important;}"
+            oa.up = json.up
+            odometerupcolor.value = json.up
+          }
+          if (!json.speed) { } else {
+            
+            lestylehere.innerHTML += ".odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,.odometer.odometer-theme-minimal.odometer-animating-down .odometer-ribbon-inner {-webkit-transition: -webkit-transform " + json.speed + "s !important;-moz-transition: -moz-transform " + json.speed + "s !important;-ms-transition: -ms-transform " + json.speed + "s !important;-o-transition: -o-transform " + json.speed + "s !important;transition: transform " + json.speed + "s !important; }"
+            lestylehere.innerHTML += ".odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,.odometer.odometer-theme-minimal.odometer-animating-up .odometer-ribbon-inner {-webkit-transition: -webkit-transform " + json.speed + "s !important;-moz-transition: -moz-transform " + json.speed + "s !important;-ms-transition: -ms-transform " + json.speed + "s !important;-o-transition: -o-transform " + json.speed + "s !important;transition: transform " + json.speed + "s !important; }"
+
+            oa.speed = json.speed
+            odometerspeed.value = json.speed
+          }
+          if (!json.type) { } else {
+            console.log(json.type)
+            //holy shit this sucks
+            if(json.type == "minimal") {
+              document.querySelector('pain').innerHTML = ""
+              document.querySelector('pain').innerHTML = `<script src="/odometer-min.js"><\/script> <link rel="stylesheet" href="/odometer-min.css">`.replace(/!%/g, "<").replace(/%!/g, ">")
+            }
+            if(json.type == "default") {
+              document.querySelector('pain').innerHTML = ""
+              document.querySelector('pain').innerHTML = `<script src="/odometer.js"><\/script> <link rel="stylesheet" href="/odometer.css">`.replace(/!%/g, "<").replace(/%!/g, ">")
+            }
+            oa.type = json.type
+            odoslc.value = json.type
+          }
+
+          localStorage.setItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterodo', JSON.stringify(oa))
+        }
+        window.setGlobalodo = function (body) {
+          const json = JSON.parse(body)
+          console.log(json.down, json.up, json.speed, json.type)
+
+          var oa = {}
+          if (!json.down || json.down == "#010101") { } else {
+            lestylehere.innerHTML += ".odometer-animating-down {color:" + json.down + " !important;}"
+            oa.down = json.down
+            odometerdowncolor.value = json.down
+          }
+          if (!json.up || json.up == "#010101") { } else {
+            lestylehere.innerHTML += ".odometer-animating-up {color:" + json.up + " !important;}"
+            oa.up = json.up
+            odometerupcolor.value = json.up
+          }
+          if (!json.speed) { } else {
+            
+            lestylehere.innerHTML += ".odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,.odometer.odometer-theme-minimal.odometer-animating-down .odometer-ribbon-inner {-webkit-transition: -webkit-transform " + json.speed + "s !important;-moz-transition: -moz-transform " + json.speed + "s !important;-ms-transition: -ms-transform " + json.speed + "s !important;-o-transition: -o-transform " + json.speed + "s !important;transition: transform " + json.speed + "s !important; }"
+            lestylehere.innerHTML += ".odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,.odometer.odometer-theme-minimal.odometer-animating-up .odometer-ribbon-inner {-webkit-transition: -webkit-transform " + json.speed + "s !important;-moz-transition: -moz-transform " + json.speed + "s !important;-ms-transition: -ms-transform " + json.speed + "s !important;-o-transition: -o-transform " + json.speed + "s !important;transition: transform " + json.speed + "s !important; }"
+
+            oa.speed = json.speed
+            odometerspeed.value = json.speed
+          }
+          if (!json.type) { } else {
+            console.log(json.type)
+            //holy shit this sucks
+            if(json.type == "minimal") {
+              document.querySelector('pain').innerHTML = ""
+              document.querySelector('pain').innerHTML = `<script src="/odometer-min.js"><\/script> <link rel="stylesheet" href="/odometer-min.css">`.replace(/!%/g, "<").replace(/%!/g, ">")
+            }
+            if(json.type == "default") {
+              document.querySelector('pain').innerHTML = ""
+              document.querySelector('pain').innerHTML = `<script src="/odometer.js"><\/script> <link rel="stylesheet" href="/odometer.css">`.replace(/!%/g, "<").replace(/%!/g, ">")
+            }
+            oa.type = json.type
+            odoslc.value = json.type
+          }
+
+          localStorage.setItem('globalodo', JSON.stringify(oa))
+        }
+        window.setgraph = function (body) {
+          const json = JSON.parse(body)
+          console.log(json.glength, json.color, json.type, json.lines)
+
+          var oa = {}
+          if (!json.color || json.color == "#010101") { } else {
+            oa.color = json.color
+            gcolor.value = json.color
+          }
+          if (!json.glength || json.glength < 2) { } else {
+            oa.glength = json.glength
+            glength.value = json.glength
+          }
+          if (!json.type) { } else {
+            oa.type = json.type
+            gtype.value = json.type
+          }
+          if (json.lines == undefined) { glines.checked = true } else {
+            oa.lines = json.lines
+            glines.checked = json.lines
+          }
+
+          localStorage.setItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-countergraph', JSON.stringify(oa))
+          gengraph()
+        }
+        window.setGlobalgraph = function (body) {
+          const json = JSON.parse(body)
+          console.log(json.glength, json.color, json.type, json.lines)
+
+          var oa = {}
+          if (!json.color || json.color == "#010101") { } else {
+            oa.color = json.color
+            gcolor.value = json.color
+          }
+          if (!json.glength || json.glength < 2) { } else {
+            oa.glength = json.glength
+            glength.value = json.glength
+          }
+          if (!json.type) { } else {
+            oa.type = json.type
+            gtype.value = json.type
+          }
+          if (json.lines == undefined) { glines.checked = true } else {
+            oa.lines = json.lines
+            glines.checked = json.lines
+          }
+
+          localStorage.setItem('globalgraph', JSON.stringify(oa))
+          gengraph()
+        }
+        const ccc = localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counter') || "not available";
+        //const odd = localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterodo')||"{}";
+        //const pgg = localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterpage')||"{}";
+        //const ggg = localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-countergraph')||"{}";
+        
+        // ! lolxd
+        const one = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterodo')||"{}")
+          const two = JSON.parse(localStorage.getItem('globalodo')||"{}")
+        const odd = {...two, ...one };
+        //A
+        // ! lolxd
+        const one1 = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-counterpage')||"{}")
+          const two1 = JSON.parse(localStorage.getItem('globalpage')||"{}")
+        const pgg = {...two1, ...one1 };
+        //A
+        // ! lolxd
+        const one2 = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2gyoutube-subscriber-countergraph')||"{}")
+          const two2 = JSON.parse(localStorage.getItem('globalgraph')||"{}")
+        const ggg = {...two2, ...one2 };
+        //A
+        console.log( {odd,pgg,ggg} )
+
+        if (ccc == "not available") {
+        } else {
+          var ccJson = JSON.parse(ccc)
+          updt()
+        }
+          window.setodo(JSON.stringify(odd))
+          window.setgraph(JSON.stringify(ggg))
+          window.setPage(JSON.stringify(pgg))
+
+        window.customcounterSet = function (enableCustomCounter, subrateMin, subrateMax, updateInterval,
+          subscriberse, api) {
+          console.log(enableCustomCounter, "enableCustomCounter", subrateMax, "subrateMax", subrateMin,
+            "subrateMin", updateInterval, "updateInterval", subscriberse, "subscriberse", api, "api")
+          if (enableCustomCounter == false) {
+            if (!localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2g ')) {
+              return
+            } else {
+              var dgg = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2g '))
+              dgg.enabled = false
+              window.customCounterEnabled = false
+              localStorage.setItem('UCmSp4bDxS9R0jpeZEvkut2g ', JSON.stringify(dgg))
+            }
+          } else {
+            var aobject = {
+              subrateMin: parseFloat(subrateMin) || 0,
+              subrateMax: parseFloat(subrateMax) || 0,
+              subscribers: parseFloat(subscriberse) || 0,
+              updateInterval: parseFloat(updateInterval) || 2,
+              apiupdates: api || false,
+              enabled: enableCustomCounter || false
+            }
+            window.customCounterEnabled = true
+            if (!localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2g ')) {
+              localStorage.setItem('UCmSp4bDxS9R0jpeZEvkut2g ', JSON.stringify(aobject))
+              updt()
+            } else {
+              localStorage.setItem('UCmSp4bDxS9R0jpeZEvkut2g ', JSON.stringify(aobject))
+            }
+            window.api = aobject.apiupdates
+          }
+          window.graph = new Highcharts.chart('graph', {
+            chart: {
+              backgroundColor: 'transparent',
+              renderTo: graph,
+              type: localStorage.getItem('gtype') || 'line',
+              zoomType: 'xy',
+              animation: false
+            },
+            title: {
+              text: localStorage.getItem('gtitle') || 'Graph',
+              style: {
+                color: localStorage.getItem('textclr') || '#FFFFFF',
+                font: localStorage.getItem('fontfamily') || 'Roboto Regular'
+              }
+            },
+            xAxis: {
+              type: 'datetime',
+              tickPixelInterval: 100,
+              labels: {
+                style: {
+                  color: localStorage.getItem('textclr') || '#FFFFFF',
+                  font: localStorage.getItem('fontfamily') || 'Roboto Regular'
+                }
+              },
+              visible: true
+            },
+            yAxis: {
+              title: {
+                text: ''
+              },
+              labels: {
+                style: {
+                  color: localStorage.getItem('textclr') || '#FFFFFF',
+                  font: localStorage.getItem('fontfamily') || 'Roboto Regular'
+                }
+              },
+              visible: true
+            },
+
+            credits: {
+              enabled: false,
+              text: "Mixerno.Space"
+            },
+
+            series: [{
+              showInLegend: false,
+              name: "",
+              marker: {
+                enabled: false
+              },
+              color: localStorage.getItem('gcolor') || "royalblue"
+
+            }]
+          })
+
+        }
+        function randomIntFromInterval(min, max) { // min and max included
+          if (min == 'NaN') return 0
+          if (max == 'NaN') return 0
+          return parseFloat((Math.random() * (min - max) + max))
+        }
+        function cc() {
+          var jay = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2g ')) || {}
+          if (!jay.enabled) return;
+          if (jay.enabled == false) return;
+          window.customCounterEnabled = true;
+          console.log(jay)
+          if (window.apicount > jay.subscribers && jay.apiupdates == true) {
+            jay.subscribers = parseFloat(window.apicount)
+          } else {
+            jay.subscribers = jay.subscribers +
+              randomIntFromInterval(parseFloat(jay.subrateMin * jay.updateInterval),
+                parseFloat(jay.subrateMax * jay.updateInterval))
+          }
+          localStorage.setItem('UCmSp4bDxS9R0jpeZEvkut2g ', JSON.stringify(jay))
+          document.getElementById('mainodo').innerHTML =
+            Math.floor(parseFloat(jay.subscribers) || 1)
+          window.graph.series[0].addPoint([
+            (Date.now()),
+            Math.floor(parseFloat(jay.subscribers) || 1)
+          ]);
+          if (window.graph.series[0].data.length >=
+            (parseFloat(localStorage.getItem('graphLength')) || 2600) /
+            jay.updateInterval) {
+            window.graph.series[0].data[0].remove()
+          }
+        }
+        function updt() {
+          var j = JSON.parse(localStorage.getItem('UCmSp4bDxS9R0jpeZEvkut2g '))
+          cc()
+          setTimeout(() => {
+            console.log("hey111", j.updateInterval)
+            updt()
+          }, j.updateInterval * 1000)
+        }
+
+
+
+
+      }
+     </script>
+        <script>
+      setTimeout(window.stop, 5000);//Lol
+        </script>
+</body>
+
+</html>
