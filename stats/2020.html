@@ -34,11 +34,54 @@
         
     </div>
 
+   <script type="text/javascript">
+    var url1=`https://api.subscriberwars.space/yt/subscriberwars`;
+    var url2=`https://beta.mixerno.space/api/youtube-subscriber-counter/channel/UCdKLd9f_8ZyDSKxMm16oRww`
+    $(document).ready(function(){
+        $.getJSON(url1, function(data) {
+            sw.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
+        });
+        $.getJSON(url2, function(data1) {
+            swapi.innerHTML=data1.userList[0].stats.subscriberCountAPI
+            views.innerHTML=data1.userList[0].stats.viewCount
+            videos.innerHTML=data1.userList[0].stats.videoCount
+        });
+    })
+    setInterval(function() {
+        $.getJSON(url1, function(data) {
+            sw.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
+        });
+        $.getJSON(url2, function(data1) {
+            swapi.innerHTML=data1.userList[0].stats.subscriberCountAPI
+            views.innerHTML=data1.userList[0].stats.viewCount
+            videos.innerHTML=data1.userList[0].stats.videoCount
+        });
+    }, 10000);
+    
+</script>
+
     <div style="width: 1260px; margin: 0px auto;">
         <div id="container">
-                    
+            <div id="sidebar">
+                <div style="width:340px; float:left">
+                    <div style="width:300px; background:rgb(0, 0, 0); padding:20px; text-transform:uppercase; color:rgb(255, 255, 255)">live sub count</div>
+                    <div id="sw" class="odometer odometer-auto-theme" style="width: 300px; height: 120px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 60pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 20px;">0</div>
+                </div>
+                <div style="width:340px; float:left">
+                    <div style="width:300px; background:rgb(0, 0, 0); padding:20px; text-transform:uppercase; color:rgb(255, 255, 255)">public sub count</div>
+                    <div id="swapi" class="odometer odometer-auto-theme" style="width: 300px; height: 120px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 60pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 20px;">0</div>
+                </div>
 
-            
+                <div style="width:340px; float:left">
+                    <div style="width:300px; background:rgb(0, 0, 0); padding:20px; text-transform:uppercase; color:rgb(255, 255, 255)">public view count</div>
+                    <div id="views" class="odometer odometer-auto-theme" style="width: 300px; height: 100px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 45pt; font-weight: bold; text-align: center; color: #fff; padding: 20px 20px;">0</div>
+                </div>
+                <div style="width:340px; float:left">
+                    <div style="width:300px; background:rgb(0, 0, 0); padding:20px; text-transform:uppercase; color:rgb(255, 255, 255)">videos</div>
+                    <div id="videos" class="odometer odometer-auto-theme" style="width: 300px; height: 120px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 60pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 20px;">0</div>
+                </div>
+            </div>       
+
             <div id="user-content"> <!--Stats-->
                 <div style="width: 860px; float: left; font-size: 8pt">
                     <div style="clear: both;"></div>
