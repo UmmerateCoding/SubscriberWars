@@ -130,16 +130,16 @@ function updateData(q, data) {
     var cnb = q+1;
 
 
-    $(".channel_"+cnb+" .cimg").attr("src",data.result[q].image);
-    $(".channel_"+cnb+" .chnam").html(data.result[q].name);
-    $(".channel_"+cnb+" .subscriberCount").html(Math.floor(data.result[q].SubscriberCount));
+    $(".channel_"+cnb+" .cimg").attr("src",data.resultv2_1[q].user.image);
+    $(".channel_"+cnb+" .chnam").html(data.resultv2_1[q].user.name);
+    $(".channel_"+cnb+" .subscriberCount").html(Math.floor(data.resultv2_1[q].stats.subscriberCount));
 
 
-    if (lol[q] - data.result[q].SubscriberCount >= 1) {
+    if (lol[q] - data.resultv2_1[q].stats.subscriberCount >= 1) {
       document.getElementById("card_thing_"+cnb+"").style.backgroundColor = "rgb(153, 51, 255)";
       setTimeout(reset, 500)
     }
-    if (lol[q] - data.result[q].SubscriberCount <= -1) {
+    if (lol[q] - data.resultv2_1[q].stats.subscriberCount <= -1) {
       document.getElementById("card_thing_"+cnb+"").style.backgroundColor = "rgb(153, 51, 255)";
       setTimeout(reset, 500)
     }
@@ -147,7 +147,7 @@ function updateData(q, data) {
     setTimeout(idkpopdelay, 1000) 
 
     function idkpopdelay() {
-      lol[q] = data.result[q].SubscriberCount
+      lol[q] = data.resultv2_1[q].stats.subscriberCount
     }
 
 function reset() {
@@ -161,7 +161,7 @@ function reset() {
 function update(){
     $.getJSON("https://mixerno.space/mixerno-space/api/estimation-system/?type=all",(data)=>{
 
-        data.result.sort(function(a,b){return b.SubscriberCount - a.SubscriberCount});
+        data.resultv2_1.sort(function(a,b){return b.stats.subscriberCount - a.stats.subscriberCount});
 
         for (var q = 0; q < 50; q++) {
           updateData(q, data)
