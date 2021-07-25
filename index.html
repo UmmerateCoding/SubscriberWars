@@ -37,22 +37,25 @@
                         <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Subscriber Wars</div>
                         <div id="sw" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
 
-                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Twitter</div>
-                        <div id="twitter" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Subscriber Wars Gaming</div>
+                        <div id="swg" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
 
-                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">TikTok</div>
-                        <div id="tiktok" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">JayMBurton</div>
+                        <div id="jb" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
                     </div>
                 </div>
 
                 <div id="panel-right">
                     <div style="float: left; width: 560px;">
 
-                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;"> Jay Burton</div>
-                        <div id="jb" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Twitter</div>
+                        <div id="twitter" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
 
                         <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">Twitch</div>
                         <div id="twitch" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
+                        
+                        <div style="width: 560px; background: #000; padding: 14px 20px; color: #fff; font-size: 10pt; text-transform: uppercase; font-weight: bold; text-align: center;">TikTok</div>
+                        <div id="tiktok" class="odometer odometer-auto-theme" style="width: 470px; height: 150px; background: rgb(20, 20, 20); margin-bottom: 20px; font-size: 80pt; font-weight: bold; text-align: center; color: #fff; padding: 0px 65px;">0</div>
                     </div>
                 </div>
             </div>
@@ -66,9 +69,10 @@
 
     var url1=`https://api.subscriberwars.space/yt/subscriberwars`;
     var url2=`https://api1.subscriberwars.space/yt/jaymburton`;
-    var url3=`https://mixerno.space/api/twitter/user/JayMBurton`;
-    var url4=`https://mixerno.space/api/twitch/user/445479678`;
-    var url5=`https://api.nextcounts.com/api/tiktok/user/stats/subscriberwars`
+    var url3=`https://swgaming.subscriberwars.space/subscribers`;
+    var url4=`https://mixerno.space/api/twitter/user/JayMBurton`;
+    var url5=`https://mixerno.space/api/twitch/user/445479678`;
+    var url6=`https://api.nextcounts.com/api/tiktok/user/stats/subscriberwars`
     
     $(document).ready(function(){
         $.getJSON(url1, function(data) {
@@ -77,13 +81,16 @@
         $.getJSON(url2,function(data){
             jb.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
                });
-        $.getJSON(url3,function(data4){
+        $.getJSON(url3,function(data){
+            swg.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
+               });
+        $.getJSON(url4,function(data4){
                    twitter.innerHTML=data4.followers
                });
-        $.getJSON(url4,function(data5){
+        $.getJSON(url5,function(data5){
                    twitch.innerHTML=data5["channels"][0].followers
                });
-        $.getJSON(url5,function(data6){
+        $.getJSON(url6,function(data6){
                    tiktok.innerHTML=data6.followers
                });
     })
@@ -96,13 +103,16 @@
         $.getJSON(url2,function(data){
             jb.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
                });
-        $.getJSON(url3,function(data4){
+        $.getJSON(url3,function(data){
+            swg.innerHTML=data.results[0].value.resultTable.metricColumns[0].counts.values[0]
+               });
+        $.getJSON(url4,function(data4){
                    twitter.innerHTML=data4.followers
                });
-        $.getJSON(url4,function(data5){
+        $.getJSON(url5,function(data5){
                    twitch.innerHTML=data5["channels"][0].followers
                });
-        $.getJSON(url5,function(data6){
+        $.getJSON(url6,function(data6){
                    tiktok.innerHTML=data6.followers
                });
     }, 10000);   
